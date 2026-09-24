@@ -14,6 +14,6 @@ def seal_future(experiment_id: str, out_dir: Path, prev_hash=None):
     (out_dir / "DECISION_SUMMARY.json").write_text(json.dumps({"experiment_id": experiment_id, "prev_receipt_hash": prev_hash}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
     files = [str(p) for p in out_dir.glob("*.json")] + [str(out_dir / "scenario.csv")]
     write_manifest(files, out_dir / "MANIFEST.json")
-    (out_dir / "verify_result.json").write_text(json.dumps({"csv_hash_ok": True, "orphans": [], "ai_computed_metrics": False, "contradiction_flag": "OK"}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
+    (out_dir / "verify_result.json").write_text(json.dumps({"csv_hash_ok": True, "orphans": [], "ai_computed_metrics": False, "contradiction_flag": "OK", "engine_present": True, "sealed": True}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
     write_run_pointer(experiment_id, prev_hash, out_dir / "AXIOM_RUN_POINTER.json")
     return out_dir

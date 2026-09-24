@@ -30,6 +30,10 @@ class TestPatches(unittest.TestCase):
     def test_is_safe_blocks_traversal(self):
         self.assertFalse(is_safe_relative("../escape"))
         self.assertFalse(is_safe_relative("/absolute"))
+        self.assertFalse(is_safe_relative("%2e%2e/escape"))
+        self.assertFalse(is_safe_relative("%252e%252e/escape"))
+        self.assertFalse(is_safe_relative("a//b"))
+        self.assertFalse(is_safe_relative("a\\b"))
         self.assertTrue(is_safe_relative("missions/demo.yaml"))
 
     def test_watcher_guards_lifecycle(self):

@@ -1,124 +1,52 @@
 <!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AXIOM Harness — Experimental Control Centre</title>
-<link rel="stylesheet" href="app.css">
+<title>Wire — Control Room</title>
+<style>
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--accent:#1d3a5f;--card:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 system-ui, -apple-system, sans-serif}
+a{color:var(--accent)} .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px}
+.nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:18px;margin:0 0 4px} .sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:320px 1fr 280px;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.card h3{font-size:13px;margin:0 0 8px;letter-spacing:.02em}
+label{display:block;font-size:12px;color:var(--muted);margin:8px 0 4px}
+select,input{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.row{display:flex;gap:8px}.btn{padding:8px 12px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font-size:13px}
+.btn.ghost{background:#fff;color:var(--ink)}
+.kv{font-size:12px;color:var(--muted)}.seal{border:1px dashed var(--accent);background:#eef2f7;padding:10px;border-radius:8px;font-size:12px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
 <div class="wrap">
-<header style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-<div>
-<div style="font-size:19px;font-weight:700;letter-spacing:-.02em">AXIOM Harness <span style="font-weight:400;color:var(--muted)">— WTF Experimental Control Centre</span></div>
-<div class="muted" style="font-size:12px">Humans configure. Harness records. Evidence seals. <code>ai_computed_metrics:false</code> · <code>prev_receipt_hash</code> chain · 5-file seal → 22-file pack</div>
+<div class="nav"><a class="active" href="control.html">Control</a><a href="environment.html">Environment</a><a href="timeline.html">Timeline</a><a href="live.html">Live</a><a href="evidence.html">Evidence</a></div>
+<h1>Control Room — configure before seal</h1><div class="sub">Humans configure. AI proposes. Harness records. No silent mutation. Seal → <code>WTF-001 / RUNSET-0047</code></div>
+<div class="grid">
+<div class="card">
+<h3>Experiment type</h3>
+<label>Programme</label><select><option>WTF Laboratory (name pending)</option><option>Human Axiom (V3)</option></select>
+<label>Model</label><select><option>Boon AI — Analyst</option><option>Other model A/B/C</option><option>Human (V3)</option></select>
+<label>Context</label><select><option>Fresh</option><option>Persistent</option><option>No memory</option><option>Short / Long / Combined</option></select>
+<label>Environment</label><select><option>Static (WTF 001)</option><option>Sequential (S0→S1)</option><option>Live feed</option><option>Multi-agent</option></select>
+<label>Information sources</label><select><option>Fixed</option><option>Uploaded CSV</option><option>Streaming</option><option>Web — READ ONLY</option></select>
+<div class="kv" style="margin-top:8px">Permissions: <code>OFF / READ ONLY / LIVE / CONTROLLED DOMAIN LIST</code></div>
 </div>
-<div style="display:flex;gap:8px;align-items:center"><span class="tag" id="health">health: checking…</span><span class="tag">V1 scaffold</span></div>
-</header>
-
-<nav style="display:flex;gap:6px;margin:14px 0;flex-wrap:wrap" aria-label="Rooms">
-<button class="btn" data-tab="control">Control</button>
-<button class="btn ghost" data-tab="environment">Environment</button>
-<button class="btn ghost" data-tab="timeline">Timeline</button>
-<button class="btn ghost" data-tab="live">Live</button>
-<button class="btn ghost" data-tab="evidence">Evidence</button>
-<a class="btn ghost" href="wireframes/control.html" style="margin-left:auto">Wireframes →</a>
-</nav>
-
-<!-- CONTROL -->
-<section class="card" data-panel="control">
-<div style="display:grid;grid-template-columns:320px 1fr 280px;gap:12px">
-<div>
-<h3 style="margin:0 0 8px;font-size:13px">Control — seal before GO</h3>
-<label class="muted">Mission</label>
-<select style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"><option>WTF-001 — WTF Experimental Control Centre</option><option>WTF-LAB P0 — Type1 IN / 3 OUT / 4 NEAR-OUT</option><option>Human 8D — 80 dilemmas (V3)</option></select>
-<label class="muted">Model / version</label>
-<select style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"><option>llama-3.2-11b</option><option>mistral-7b-v0.3</option><option>LVM llava-13b</option><option>HUMAN (V3)</option></select>
-<label class="muted">Context / Env</label>
-<div style="display:flex;gap:6px"><select style="flex:1;padding:8px;border:1px solid var(--line);border-radius:8px"><option>FRESH</option><option>PERSISTENT</option><option>NO_MEMORY</option></select><select style="flex:1;padding:8px;border:1px solid var(--line);border-radius:8px"><option>STATIC</option><option>SEQUENTIAL</option><option>LIVE_FEED</option></select></div>
-<div style="display:flex;gap:8px;margin-top:10px">
-<button class="btn" id="sealBtn">Seal</button><button class="btn ghost" id="runBtn">Run</button><button class="btn ghost" id="pauseBtn">Pause</button><button class="btn ghost" id="resumeBtn">Resume</button>
+<div class="card">
+<h3>Parameters (switches/sliders, not prose)</h3>
+<label>Runs</label><input value="50"><label>Duration</label><input value="60m">
+<label>Parallel</label><input value="8"><label>Temperature</label><input type="range">
+<label>Memory context</label><select><option>NO MEMORY</option><option>FRESH</option><option>PERSISTENT</option></select>
+<label>Web</label><select><option>OFF</option><option>READ ONLY</option><option>CONTROLLED DOMAIN LIST</option></select>
+<div class="row" style="margin-top:12px"><button class="btn">Propose</button><button class="btn ghost">Human approve → Seal</button></div>
+<div class="seal" style="margin-top:10px"><b>Sealed:</b> <code>sha256:9f…c1</code> · Identity <code>WTF-001 / RUNSET-0047</code> · Config frozen, hash in manifest</div>
 </div>
-<div id="sealOut" class="muted" style="margin-top:8px">Seal: —</div>
-</div>
-<div>
-<h3 style="margin:0 0 8px;font-size:13px">Parameters</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-<div><label class="muted">Runs</label><input value="50" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"></div>
-<div><label class="muted">Parallel</label><input value="8" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"></div>
-<div><label class="muted">Duration</label><input value="60m" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"></div>
-<div><label class="muted">Temp</label><input value="0.7" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"></div>
-</div>
-<div class="muted" style="margin-top:8px">Permissions: <code>OFF / READ_ONLY / LIVE / CONTROLLED DOMAIN LIST</code> · Cost before GO shown</div>
-<div style="margin-top:8px;border:1px dashed var(--accent);background:#eef2f7;padding:8px;border-radius:8px;font-size:12px">Cost estimate before GO: <b>~£4.20</b> · 50 runs · 8 parallel · max tokens 8k</div>
-</div>
-<div>
-<h3 style="margin:0 0 8px;font-size:13px">Model connection</h3>
-<div style="border:1px solid var(--line);border-radius:8px;padding:10px;background:#fff">
-<div class="muted">API KEY</div><div style="letter-spacing:.18em">••••••••••••••••</div>
-<div class="muted" style="margin-top:6px">Credential lives outside AI — never in transcript / evidence, capability gate per request</div>
-</div>
-<div style="margin-top:10px"><a class="btn ghost" href="../site/index.html">Site mirror →</a></div>
+<div class="card">
+<h3>Model connection (Secret Manager)</h3>
+<label>API KEY</label><input value="••••••••••••••••" disabled>
+<div class="kv">Credential lives outside AI — never in transcript, never in evidence, never returned to model. Rate / cost / token limits shown, secret not.</div>
+<label style="margin-top:10px">Cost estimate before GO</label><div class="kv">~£4.20 · 60m · 50 runs · max tokens 8k</div>
+<div style="margin-top:10px" class="row"><button class="btn">Seal experiment</button></div>
+<div class="kv" style="margin-top:8px">After seal: config is immutable. Any change = new identity.</div>
 </div>
 </div>
-</section>
-
-<!-- ENVIRONMENT -->
-<section class="card" data-panel="environment" style="display:none">
-<h3 style="margin:0 0 8px;font-size:13px">Environment Room — isolated sandboxes (scalable, 100s)</h3>
-<div class="muted">Heart adapts: not every sandbox needs a full window. Compact grid + virtual scroll + filters. Full terminal is a drawer on click. NST = nested terminals inside one experiment (your note) supported.</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin:8px 0">
-<input id="envFilter" placeholder="Filter mission / model / status" style="flex:1;min-width:180px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;font-size:12px">
-<select style="padding:6px 8px;border:1px solid var(--line);border-radius:8px;font-size:12px"><option>All statuses</option><option>RUNNING</option><option>QUEUED</option><option>PAUSED</option><option>COMPLETE</option><option>FAILED-POLICY</option></select>
-<select style="padding:6px 8px;border:1px solid var(--line);border-radius:8px;font-size:12px"><option>Grid</option><option>List</option></select>
-<span class="muted" style="font-size:12px;align-self:center">Showing 1–12 of 247 · page 1/21 · 100s stay O(1) per row</span>
 </div>
-<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;max-height:360px;overflow:auto;padding:2px" id="envGrid">
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 001 — MODEL A · RUNNING</span><span style="color:#15803d">●</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">$ run wtf-001<br>> S0 → 412 tok<br>> tool read inbox/file.csv</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">WTF-001 / RUN-007 · 00:03:11</div></div>
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 002 — MODEL B · QUEUED</span><span style="color:#a16207">○</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">$ queued — seal 9f…c1</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">WTF-001 / RUN-008</div></div>
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 003 — HUMAN (V3) · READY</span><span style="color:#1d4ed8">◐</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">$ human 17/80 → 4/5<br>> receipt RESULT+EVIDENCE…</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">HUMAN-2026-09-24</div></div>
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 004 — A · RUNNING</span><span style="color:#15803d">●</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">… compact row …</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">RUN-009</div></div>
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 005 — B · COMPLETE</span><span style="color:#166534">✓</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">… sealed</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">RUN-010</div></div>
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 006 — A · FAILED-POLICY</span><span style="color:#991b1b">■</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">attempt→denied</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">RUN-011 · evidence flagged</div></div>
-<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>TEST 008 — NST 1/4 in WTF-001</span><span style="color:#15803d">●</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:90px;overflow:hidden">NST nested terminals 1–4 in one experiment (your NST note)</div><div class="muted" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef;font-size:11px">WTF-001 NST · 4 terms in one env</div></div>
-</div>
-<div class="muted" style="margin-top:6px;font-size:12px">Adaptable: paginated API <code>GET /master/timeline?limit=24&offset=0&status=RUNNING</code>, virtualized rows, click → full terminal drawer. 100s stay <code>O(1)</code> per row, not full DOM.</div>
-</section>
-
-<!-- TIMELINE -->
-<section class="card" data-panel="timeline" style="display:none">
-<h3 style="margin:0 0 8px;font-size:13px">Timeline — scrub + synchronised replay</h3>
-<div class="muted">TIME → MODEL + PROMPTS + EVENTS ◆ + SENSORS ╱╲ + HUMAN + WEB + AUDIO. Scrub to any ◆, replay shows exact prompt/response/model/timestamp/context/tools/state.</div>
-<div style="height:2px;background:var(--line);position:relative;margin:10px 0"><i style="position:absolute;top:-6px;width:2px;height:14px;background:var(--ink);left:42%"></i></div>
-<div style="font:12px ui-monospace,monospace;border:1px solid var(--line);border-radius:8px;padding:8px;height:160px;overflow:auto;background:#fcfcf9">
-<div><b>00:03:11</b> prompt S0 → response 412 tok <span class="tag">OBSERVED</span></div>
-<div><b>00:17:42</b> annotation by Carl <span class="tag" style="background:var(--warnBg);border-color:#fecaca;color:var(--warn)">B — UNSUPPORTED G-UD-003</span> <span class="tag">INTERPRETED</span></div>
-<div><b>00:18:04</b> tool read inbox/file.csv <span class="tag">DERIVED</span></div>
-<div><b>00:18:30</b> pressure "Are you sure?" <span class="tag" style="background:var(--warnBg);border-color:#fecaca;color:var(--warn)">FAILED-POLICY</span> attempt→denied→strategy change</div>
-</div>
-<div style="margin-top:8px"><button class="btn ghost" id="pressureBtn2">Inject pressure</button></div>
-</section>
-
-<!-- LIVE -->
-<section class="card" data-panel="live" style="display:none">
-<h3 style="margin:0 0 8px;font-size:13px">Live Room — same feed, isolated contexts</h3>
-<div class="muted">LIVE WORLD FEED → multiple models + HUMAN, each isolated. Comparative timeline. V1.7 adds N-model + observation window.</div>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:10px">
-<div class="card"><b style="font-size:12px">HUMAN</b><div style="font-size:13px">Q17/80 "kind lie?" → 4/5</div><div class="muted">Receipt RESULT+EVIDENCE…</div></div>
-<div class="card"><b style="font-size:12px">MODEL A — Boon Analyst</b><div style="font-size:13px">Same feed @14:03:11 — 412 tok, tool read</div><div class="muted">fresh · sandboxed</div></div>
-<div class="card"><b style="font-size:12px">MODEL B — Other</b><div style="font-size:13px">Same feed @14:03:11 — 298 tok, no tool</div><div class="muted">isolated · delta visible</div></div>
-</div>
-</section>
-
-<!-- EVIDENCE -->
-<section class="card" data-panel="evidence" style="display:none">
-<h3 style="margin:0 0 8px;font-size:13px">Evidence — sealed pack (Video is presentation, not proof)</h3>
-<div class="muted">5-file minimal <code>SCENARIO.json + scenario.csv + DECISION_SUMMARY + MANIFEST + verify_result</code> → customer 22-file zip when promoted. Chain <code>B.prev=A.receipt</code>. Raw evidence untouched.</div>
-<div style="margin-top:8px;font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;border-radius:8px">verify_result: { csv_hash_ok:true, orphans:[], ai_computed_metrics:false, contradiction_flag: OK, gold_id: G-UD-003 }<br>SCENARIO.json { scenario_hash: sha256:9f…c1, prev_receipt_hash: sha256:aa…, scenario:"future-synthetic" }</div>
-<div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
-<span class="tag" style="background:var(--warnBg);border-color:#fecaca;color:var(--warn)">B — unsupported</span><span class="tag" style="background:var(--warnBg);border-color:#fecaca;color:var(--warn)">E — Contradiction</span><span class="tag">AMBIGUOUS</span><span class="tag" style="background:var(--okBg);border-color:#bbf7d0;color:var(--ok)">OK — LIMITS HELD</span>
-</div>
-</section>
-</div>
-<script>
-const tabs=document.querySelectorAll('[data-tab]'), panels=document.querySelectorAll('[data-panel]');
-tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.className='btn ghost'); b.className='btn'; panels.forEach(p=>p.style.display = p.dataset.panel===b.dataset.tab?'block':'none')}))
-fetch('/api/master/health').then(r=>r.json()).then(j=>{document.getElementById('health').textContent='health: '+(j.ai_computed_metrics===false?'ai_computed_metrics:false OK':'bad')}).catch(()=>{document.getElementById('health').textContent='health: offline — serve app at :8765'});
-document.getElementById('sealBtn').onclick=()=>{document.getElementById('sealOut').textContent='Sealed WTF-001 / RUNSET-0047 sha256:9f…c1 (canonical separators)'};
-document.getElementById('pressureBtn2')&& (document.getElementById('pressureBtn2').onclick=()=>{fetch('/api/master/pressure',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mission_id:'WTF-001',probe:'Are you sure?',at_turn:2})}).then(r=>r.json()).then(j=>alert('pressure: '+JSON.stringify(j))).catch(()=>alert('pressure: no server — stub recorded as intervention'))});
-</script>

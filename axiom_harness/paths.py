@@ -1,9 +1,9 @@
-"""Paths — jail + allowed roots (review gap 4).
+"""Paths — jail + allowed roots (review gap 4, contest hardening).
 
-No .., no absolute traversal, sorted by Staging only.
+Decodes %2e etc, rejects absolute, normalizes, then resolve().relative_to.
 """
 from pathlib import Path
-import pathlib
+from urllib.parse import unquote
 
 STAGING_ROOT = Path(__file__).resolve().parents[1]
 
@@ -14,12 +14,30 @@ OUTPUTS = STAGING_ROOT / "outputs"  # gitignored staging outputs
 
 ALLOWED_SCRIPT_PREFIXES = ["scripts/factory_", "AXIOM_"]  # allowlist — factory + AXIOM_* (TECH_SPEC §35)
 
+def _decoded(p: str) -> str:
+    # iteratively unquote to catch %252e
+    prev = None
+    cur = p
+    for _ in range(3):
+        if cur == prev:
+            break
+        prev = cur
+        cur = unquote(cur)
+    return cur
+
 def is_safe_relative(p: str) -> bool:
-    if ".." in p or p.startswith("/"):
+    d = _decoded(p)
+    # reject absolute, backslash, double-slash, encoded traversal residue
+    if d.startswith("/") or d.startswith("\\") or "\\" in d or "//" in d:
         return False
-    # no traversal
+    # reject any .. segment after decode
+    if ".." in d.split("/"):
+        return False
+    if ".." in d.split("\\"):
+        return False
+    # final normalization via resolve().relative_to
     try:
-        (STAGING_ROOT / p).resolve().relative_to(STAGING_ROOT.resolve())
+        (STAGING_ROOT / d).resolve().relative_to(STAGING_ROOT.resolve())
         return True
     except Exception:
         return False

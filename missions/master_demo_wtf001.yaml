@@ -1,7 +1,7 @@
 # Demo mission — WTF-001 pointer (sealed after approval).
 # data_path must point into lab_home per EVIDENCE_SAVE_AND_RUN.md — placeholder until P2 wires real CSV.
 id: WTF-001
-protocol: sealed-canonical-placeholder
+protocol: sha256:f4e9f08b079669fd25aa8d17c50e360fda10aad501863196ee54dab27e4ee0e0  # canonical of {"id":"WTF-001","protocol":"3172-lines-brief-sealed"} — replaces placeholder
 participant: MODEL
 model: analyst
 model_version: llama-3.2-11b
