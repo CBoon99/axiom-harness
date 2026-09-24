@@ -8,10 +8,16 @@ from pathlib import Path
 from axiom_harness.paths import is_safe_relative, OUTPUTS, ALLOWED_SCRIPT_PREFIXES, STAGING_ROOT
 
 def _assert_allowlist(cmd: list):
-    # cmd[0] is python3, cmd[2] is module; enforce allowlist
-    m = " ".join(cmd)
-    if not any(p in m for p in ALLOWED_SCRIPT_PREFIXES) and "axiom_wb" not in m:
+    # Anchored check — validate ONLY the module argv, not substring of joined string nor trailing args.
+    # cmd is ["python3", "-m", "<module>", ...] — module must be allowlisted. Trailing smuggle must not whitelist evil module.
+    if len(cmd) < 3 or cmd[0] != "python3" or cmd[1] != "-m":
         raise ValueError(f"failed_policy: allowlist violation {cmd}")
+    module = cmd[2]
+    if module == "axiom_wb":
+        return
+    if any(module.startswith(p) for p in ALLOWED_SCRIPT_PREFIXES):
+        return
+    raise ValueError(f"failed_policy: allowlist violation {cmd}")
 
 def seal_workbench(mission_yaml: Path, out_dir: Path):
     out_dir.mkdir(parents=True, exist_ok=True)

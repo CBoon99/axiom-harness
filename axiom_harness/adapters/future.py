@@ -5,6 +5,12 @@ Writes 5 artefacts with chain B.prev=A, label future-synthetic, FCA disclaimer.
 import json, pathlib
 from pathlib import Path
 from axiom_harness.manifest import write_manifest, write_run_pointer
+from axiom_harness.paths import ALLOWED_SCRIPT_PREFIXES  # keep allowlist in scope for future subprocess use
+
+# No subprocess in this leaf — allowlist reserved for when future spawns a script (TECH_SPEC §35)
+def _assert_allowlist_noop(cmd: list):
+    # intentionally no subprocess here; placeholder to keep allowlist wired
+    return
 
 def seal_future(experiment_id: str, out_dir: Path, prev_hash=None):
     out_dir.mkdir(parents=True, exist_ok=True)

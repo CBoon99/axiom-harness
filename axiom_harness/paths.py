@@ -15,12 +15,18 @@ OUTPUTS = STAGING_ROOT / "outputs"  # gitignored staging outputs
 ALLOWED_SCRIPT_PREFIXES = ["scripts/factory_", "AXIOM_"]  # allowlist — factory + AXIOM_* (TECH_SPEC §35)
 
 def _decoded(p: str) -> str:
-    # iteratively unquote to catch %252e
+    # iterative unquote until stable — catches %2525252e depth>3
     prev = None
     cur = p
-    for _ in range(3):
+    for _ in range(10):
         if cur == prev:
             break
+        prev = cur
+        cur = unquote(cur)
+        if "%" not in cur:
+            break
+    # second pass while still changing (defense in depth)
+    while cur != prev:
         prev = cur
         cur = unquote(cur)
     return cur

@@ -3,6 +3,11 @@
 Respects WTF-LAB BRIEF-V1 §6 MATRIX_BLOCKED_UNTIL_SWITCH_WIRED.
 Any ON request before wiring raises failed_policy without calling living code.
 """
+from axiom_harness.paths import ALLOWED_SCRIPT_PREFIXES  # keep allowlist in scope for when PER/ECA spawns
+
+def _assert_allowlist_noop(cmd: list):
+    return
+
 def ensure_off(per_eca_state: dict):
     if per_eca_state.get("per") == "ON" or per_eca_state.get("eca") == "ON":
         raise RuntimeError("failed_policy: MATRIX_BLOCKED_UNTIL_SWITCH_WIRED — PER/ECA OFF in V1")

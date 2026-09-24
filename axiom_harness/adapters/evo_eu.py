@@ -2,6 +2,10 @@
 import json
 from pathlib import Path
 from axiom_harness.manifest import write_manifest
+from axiom_harness.paths import ALLOWED_SCRIPT_PREFIXES  # keep allowlist in scope
+
+def _assert_allowlist_noop(cmd: list):
+    return
 
 def seal_evo_eu(experiment_id: str, out_dir: Path, cards_ref: str = "WTF-005A/B frozen"):
     out_dir.mkdir(parents=True, exist_ok=True)
