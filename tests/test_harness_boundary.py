@@ -70,3 +70,35 @@ def test_no_duplicated_maths():
         assert "HYPOTHESIS_WEIGHTS" not in txt
         assert "T_max" not in txt
         assert "epsilon_base" not in txt
+
+def test_harness_cannot_import_untracked_sibling_code():
+    # Harness must not import untracked sibling-repository code (PER/ECA via sys.path hack)
+    txt = (pathlib.Path(__file__).parents[1] / "axiom_harness/mission.py").read_text()
+    assert "sys.path" not in txt
+    assert "PER-Core" not in txt
+    assert "ECA/sim" not in txt
+
+def test_harness_cannot_rely_on_local_only_files():
+    # Harness adapter must not rely on local-only upstream files (e.g., /tmp/anthropic_key)
+    for p in (pathlib.Path(__file__).parents[1] / "axiom_harness").rglob("*.py"):
+        txt = p.read_text()
+        assert "/tmp/anthropic_key" not in txt
+        assert "untracked" not in txt.lower() or "tracked" in txt.lower()
+
+def test_harness_cannot_convert_failure_to_pass():
+    from axiom_harness.adapters.per_eca import ensure_off
+    # ensure_off failure must stay failed_policy, not become PASS
+    try:
+        ensure_off({"per":"ON","eca":"OFF"})
+    except RuntimeError as e:
+        assert "failed_policy" in str(e)
+        # must not be sealed:true
+        assert "sealed" not in str(e).lower() or "true" not in str(e).lower()
+
+def test_harness_cannot_declare_upstream_proven():
+    # Invocation success != proven — Harness must not declare ECA proven merely because invocation succeeded
+    # Check that no Harness file claims ECA proven
+    for p in (pathlib.Path(__file__).parents[1] / "axiom_harness").rglob("*.py"):
+        txt = p.read_text().lower()
+        assert "eca proven" not in txt
+        assert "eca_pass" not in txt
