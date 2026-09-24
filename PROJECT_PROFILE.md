@@ -2,7 +2,7 @@
 
 **Product:** Axiom Harness Master
 **Parent:** BoonMind Labs · WTF Laboratory programme (name pending) · Boon AI (participant) · Axiom Workbench (evidence)
-**Root:** `Documents/Axiom Harness Master/` (FROZEN 2026-09-24) → Staging `Documents/Axiom-Harness-Staging/` (writable)
+**Root:** `Documents/Axiom Harness-Master - Dont Touch/` (FROZEN 2026-09-24, git remote `axiom-harness` [https://github.com/CBoon99/axiom-harness](https://github.com/CBoon99/axiom-harness)) → Staging `Documents/Axiom Harness-Master - Dont Touch/Staging/` (writable, paper alias `Axiom-Harness-Staging/`)
 **Briefs:** `AXIOM HARNESS Brief (1).md` + `(2).md` 3,172 lines each, identical; `Docs/Copy … LVM … not master` identical
 **One-liner:** AXIOM Harness — WTF Experimental Control Centre & AI Observation Platform.
 **Tagline:** Humans configure the laboratory. AI operates inside the laboratory. The Harness records the laboratory. The evidence layer seals the laboratory.
@@ -44,7 +44,7 @@ WTF Laboratory / WTF test family, PER (Progressive Evidence Retrieval telescope 
 Master frozen -do not touch until unlock; staging is writable; upstreams read-only (axiom_wb, axiom_future/policy.py, PER/ECA sims, World-A-EvoCycles, Epistemic-UX, world-a); BML Quad + GLOBAL-AGENTIC-BUILD-SYSTEM + BML-CODE-HYGIENE + AGENT_STANDARDS + brand guide; budget one pass→QA→STOP; local until push live.
 
 ## Evidence home
-Master `Axiom Harness Master/` witness; Staging `Axiom-Harness-Staging/` builds; private notes `/tmp/axiom-*-private-notes.md` (not in Master); sealed packs `docs/evidence/` or `Axiom-Workbench/docs/evidence/lab_home/` when promoted.
+Master `Axiom Harness-Master - Dont Touch/` witness (aliases: `Axiom Harness Master/` paper, `Axiom-Harness-Staging/` paper); Staging `Axiom Harness-Master - Dont Touch/Staging/` builds (git `axiom-harness`); `STAGING_ROOT` asserts `__file__` resolves under `.../Axiom Harness-Master - Dont Touch/Staging`; private notes `/tmp/axiom-*-private-notes.md` (not in Master); sealed packs `docs/evidence/` or `Axiom-Workbench/docs/evidence/lab_home/` when promoted.
 
 ## Status
 P0 planning — next PROJECT_PROFILE frozen here, STAGING_DECISIONS + PLAN_V1 + wireframes + tech/DB/API in Staging. No build in Master. No public deploy until Complete Report Pack shape + claim gate signed.

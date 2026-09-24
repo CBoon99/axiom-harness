@@ -6,6 +6,8 @@ from pathlib import Path
 from urllib.parse import unquote
 
 STAGING_ROOT = Path(__file__).resolve().parents[1]
+# alias assertion — must resolve under "Axiom Harness-Master - Dont Touch/Staging"
+assert "Axiom Harness-Master - Dont Touch/Staging" in str(STAGING_ROOT) or "Axiom Harness Master" in str(STAGING_ROOT), f"STAGING_ROOT mis-located {STAGING_ROOT}"
 
 # inside Master, writable
 STAGING_DOCS = STAGING_ROOT / "docs"
