@@ -1,6 +1,8 @@
 # AUDIT MASTER — GAPS & HALLUCINATIONS (Synthesis of 6 Audits) — 2026-09-24
 
-**Status:** ON HOLD synthesis — staging `Axiom Harness-Master - Dont Touch/Staging/` @ `5c2c234` → `104 passed` post-boundary audit · `smoke.sh 5/5` · Master frozen 2026-09-24 05:39
+**AUDIT_EXECUTION:** PASS (6 audits ran, individual reports written, synthesis generated)
+**FINDINGS_RESOLVED:** PARTIAL — 6 findings hold, P0 gaps closed, but open WP1 hero promotion / evidence sealing wiring / 8 hallucinations remain (see §§Gaps/Hallucinations) — not PASS, not FAIL
+**Status:** ON HOLD synthesis — staging `Axiom Harness-Master - Dont Touch/Staging/` @ `5c2c234` → `104 passed` post-boundary audit · `smoke.sh 5/5` · Master frozen 2026-09-24 05:39 — AUDIT_EXECUTION PASS ≠ FINDINGS_RESOLVED PASS
 **Source:** 6 prior workflow child results synthesized; each child inspected source/tests/config — discovery pointers alone not reused, bodies re-inspected before this master.
 **Scope:** Harness only (not ECA/PER/Evidence Axiom reimplementation); boundary `LOAD/CONFIGURE/FREEZE/RUN/RECORD/SEAL` vs upstream maths owned elsewhere.
 

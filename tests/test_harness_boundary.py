@@ -1,4 +1,7 @@
-"""Harness boundary — orchestration only, no duplicated ECA/PER maths."""
+"""Harness boundary — STATIC GUARDS (not runtime isolation proof).
+
+These 12 tests are static guards: they prove Harness does not contain duplicated ECA/PER maths and cannot silently alter/replace/prove upstream.
+Runtime isolation is proven by fresh-clone execution (HARNESS V1 VERIFICATION 52b6b6e) — stronger evidence, not re-run for doc-only changes."""
 import importlib, pathlib, json
 
 def test_harness_cannot_calculate_gateok():
