@@ -1,0 +1,11 @@
+/* Harness app tokens — carried from Future ice #E2E8F0 + Workbench blue #3B82F6, paper #faf6ef / ink #1c1712 kept per taste DO NOTs: no purple gradient, no glassmorphism, no Inter-everywhere */
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--card:#fff;--accent:#1d3a5f;--accent2:#0f766e;--warn:#991b1b;--warnBg:#fef2f2;--ok:#166534;--okBg:#f0fdf4}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.5 system-ui, -apple-system, sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1120px;margin:0 auto;padding:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.btn{padding:7px 12px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font-size:13px}
+.btn.ghost{background:#fff;color:var(--ink)}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:2px 6px;border-radius:6px;background:#fff}
+.muted{color:var(--muted);font-size:12px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

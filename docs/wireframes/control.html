@@ -1,0 +1,52 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wire — Control Room</title>
+<style>
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--accent:#1d3a5f;--card:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 system-ui, -apple-system, sans-serif}
+a{color:var(--accent)} .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px}
+.nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:18px;margin:0 0 4px} .sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:320px 1fr 280px;gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.card h3{font-size:13px;margin:0 0 8px;letter-spacing:.02em}
+label{display:block;font-size:12px;color:var(--muted);margin:8px 0 4px}
+select,input{width:100%;padding:8px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.row{display:flex;gap:8px}.btn{padding:8px 12px;border-radius:8px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font-size:13px}
+.btn.ghost{background:#fff;color:var(--ink)}
+.kv{font-size:12px;color:var(--muted)}.seal{border:1px dashed var(--accent);background:#eef2f7;padding:10px;border-radius:8px;font-size:12px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+<div class="nav"><a class="active" href="control.html">Control</a><a href="environment.html">Environment</a><a href="timeline.html">Timeline</a><a href="live.html">Live</a><a href="evidence.html">Evidence</a></div>
+<h1>Control Room — configure before seal</h1><div class="sub">Humans configure. AI proposes. Harness records. No silent mutation. Seal → <code>WTF-001 / RUNSET-0047</code></div>
+<div class="grid">
+<div class="card">
+<h3>Experiment type</h3>
+<label>Programme</label><select><option>WTF Laboratory (name pending)</option><option>Human Axiom (V3)</option></select>
+<label>Model</label><select><option>Boon AI — Analyst</option><option>Other model A/B/C</option><option>Human (V3)</option></select>
+<label>Context</label><select><option>Fresh</option><option>Persistent</option><option>No memory</option><option>Short / Long / Combined</option></select>
+<label>Environment</label><select><option>Static (WTF 001)</option><option>Sequential (S0→S1)</option><option>Live feed</option><option>Multi-agent</option></select>
+<label>Information sources</label><select><option>Fixed</option><option>Uploaded CSV</option><option>Streaming</option><option>Web — READ ONLY</option></select>
+<div class="kv" style="margin-top:8px">Permissions: <code>OFF / READ ONLY / LIVE / CONTROLLED DOMAIN LIST</code></div>
+</div>
+<div class="card">
+<h3>Parameters (switches/sliders, not prose)</h3>
+<label>Runs</label><input value="50"><label>Duration</label><input value="60m">
+<label>Parallel</label><input value="8"><label>Temperature</label><input type="range">
+<label>Memory context</label><select><option>NO MEMORY</option><option>FRESH</option><option>PERSISTENT</option></select>
+<label>Web</label><select><option>OFF</option><option>READ ONLY</option><option>CONTROLLED DOMAIN LIST</option></select>
+<div class="row" style="margin-top:12px"><button class="btn">Propose</button><button class="btn ghost">Human approve → Seal</button></div>
+<div class="seal" style="margin-top:10px"><b>Sealed:</b> <code>sha256:9f…c1</code> · Identity <code>WTF-001 / RUNSET-0047</code> · Config frozen, hash in manifest</div>
+</div>
+<div class="card">
+<h3>Model connection (Secret Manager)</h3>
+<label>API KEY</label><input value="••••••••••••••••" disabled>
+<div class="kv">Credential lives outside AI — never in transcript, never in evidence, never returned to model. Rate / cost / token limits shown, secret not.</div>
+<label style="margin-top:10px">Cost estimate before GO</label><div class="kv">~£4.20 · 60m · 50 runs · max tokens 8k</div>
+<div style="margin-top:10px" class="row"><button class="btn">Seal experiment</button></div>
+<div class="kv" style="margin-top:8px">After seal: config is immutable. Any change = new identity.</div>
+</div>
+</div>
+</div>

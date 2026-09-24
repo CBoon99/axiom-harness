@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wire — Timeline</title>
+<style>
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--accent:#1d3a5f;--card:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 system-ui,sans-serif}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px}
+.nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}
+.row{display:flex;gap:8px;align-items:center}
+.bar{height:14px;background:#1d3a5f;border-radius:4px}
+.track{border:1px solid var(--line);border-radius:8px;padding:8px;margin:6px 0;display:grid;grid-template-columns:90px 1fr;gap:8px;align-items:center}
+.track b{font-size:11px;letter-spacing:.04em;color:var(--muted)}
+.scrub{height:2px;background:var(--line);position:relative;margin:12px 0}
+.scrub i{position:absolute;top:-6px;width:2px;height:14px;background:var(--ink);left:42%}
+</style>
+<div class="wrap">
+<div class="nav"><a href="control.html">Control</a><a href="environment.html">Environment</a><a class="active" href="timeline.html">Timeline</a><a href="live.html">Live</a><a href="evidence.html">Evidence</a></div>
+<h1>Timeline — scrub + synchronised replay</h1><div class="sub">TIME → MODEL + PROMPTS + EVENTS ◆ + SENSORS ╱╲ + HUMAN + WEB + AUDIO. Scrub to any event, replay shows exact prompt/response/model/timestamp/context/tools/state.</div>
+<div class="card">
+<div class="row" style="justify-content:space-between"><span style="font-weight:600">WTF-001 / RUN-001</span><span style="font-size:12px;color:#5c5348">00:17:42 annotation · author Carl · target event 142</span></div>
+<div class="scrub"><i></i></div>
+<div class="track"><b>MODEL</b><div><div class="bar" style="width:38%"></div></div></div>
+<div class="track"><b>TRANSCRIPT</b><div style="font:12px ui-monospace,monospace">S0 prompt → response (412 tok) → tool read → response</div></div>
+<div class="track"><b>EVENTS ◆</b><div>◆ prompt  ◆ response  ◆ tool  ◆ sensor</div></div>
+<div class="track"><b>SENSORS ╱╲</b><div><div class="bar" style="width:22%;background:#7a6540"></div></div></div>
+<div class="track"><b>AUDIO</b><div style="font-size:12px;color:var(--muted)">waveform + STT transcript (V1.5 stub — not in V1 runtime)</div></div>
+<div class="track"><b>ANNOTATION</b><div style="font-size:12px">“Drift at 00:17 — check tool output” — author, timestamp, target event, version</div></div>
+<div style="margin-top:10px;font-size:12px;color:var(--muted)">Replay: click any ◆ to see exact prompt/response/model/timestamp/context/tools/state — derived from recorded transcript, not invented.</div>
+</div>
+</div>

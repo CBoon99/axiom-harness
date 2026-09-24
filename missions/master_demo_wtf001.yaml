@@ -1,0 +1,13 @@
+# Demo mission — WTF-001 pointer (sealed after approval).
+# data_path must point into lab_home per EVIDENCE_SAVE_AND_RUN.md — placeholder until P2 wires real CSV.
+id: WTF-001
+protocol: sealed-canonical-placeholder
+participant: MODEL
+model: analyst
+model_version: llama-3.2-11b
+per_eca_state: {per: OFF, eca: OFF}
+cost: {tokens_input: 0, tokens_output: 0, cost_usd: 0, provider: none}
+context_kind: FRESH
+env_kind: STATIC
+params: {runs: 18, duration: 60m, parallel: 2, temp: 0.7}
+permissions: {FIXED: READ_ONLY, WEB: OFF}

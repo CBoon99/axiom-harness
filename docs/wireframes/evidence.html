@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wire — Evidence</title>
+<style>
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--card:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 system-ui,sans-serif}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px}
+.nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+.card h3{font-size:13px;margin:0 0 6px}
+.kv{font-size:12px;color:var(--muted)}
+pre{font:11px/1.4 ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:10px;border-radius:8px;overflow:auto}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--line);padding:2px 6px;border-radius:6px;background:#fff}
+</style>
+<div class="wrap">
+<div class="nav"><a href="control.html">Control</a><a href="environment.html">Environment</a><a href="timeline.html">Timeline</a><a href="live.html">Live</a><a class="active" href="evidence.html">Evidence</a></div>
+<h1>Evidence — sealed pack (Video is presentation, not proof)</h1><div class="sub">Sealed pack: hashes, provenance, metrics where applicable. Raw evidence untouched — video derived from timeline + replay, not evidence itself. <code>ai_computed_metrics:false</code></div>
+<div class="card">
+<h3>Seal</h3><div class="kv">5-file minimal (SCENARIO.json + scenario.csv + DECISION_SUMMARY + MANIFEST + verify_result) → Customer 8 docs + receipt + 3 plot families (22-file zip) when promoted. Chain <code>B.prev = A.receipt</code></div>
+<pre>SCENARIO.json { scenario_hash: sha256:9f…c1, prev_receipt_hash: sha256:aa… , scenario:"future-synthetic", label: WTF-001/RUNSET-0047, disclaimer: "not prediction/forecast… FCA one-liner" }
+MANIFEST.json { files: [{path, sha256}, …] }  verify_result { csv_hash_ok:true, orphans:[], ai_computed_metrics:false }</pre>
+</div>
+<div class="card">
+<h3>Three tiers shown</h3><div><span class="tag">OBSERVED</span> prompt/response/tool/sensor/intervention @ timestamp — watcher recorded</div>
+<div style="margin-top:6px"><span class="tag">DERIVED</span> metric from deterministic ROM (e.g. ΔH, token count, wear) — computed, not proposed</div>
+<div style="margin-top:6px"><span class="tag">INTERPRETED</span> annotation / reading / comparison — author + version, separate from observed</div>
+<div class="kv" style="margin-top:8px">FAILED-POLICY attempts (attempt→denied→strategy change) are evidence, not error to suppress.</div>
+</div>
+<div class="card">
+<h3>Contradiction / unsupported flags (review gap 1)</h3>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:6px 0">
+<span class="tag" style="background:#fef2f2;border-color:#fecaca;color:#991b1b">B — unsupported / NOT_SUPPORTED (e.g. G-UD-003 in WTF-000-A)</span>
+<span class="tag" style="background:#fef2f2;border-color:#fecaca;color:#991b1b">E — Contradiction (Type 4 near-out)</span>
+<span class="tag" style="background:#fefce8;border-color:#fde68a;color:#92400e">AMBIGUOUS — E1/E2/E3 cannot be cleanly assigned</span>
+<span class="tag" style="background:#f0fdf4;border-color:#bbf7d0;color:#166534">OK — LIMITS HELD</span>
+</div>
+<div class="kv">UI flags are derived from sealed gold derivation rule (<code>DIRECT | OUT | NEAR-OUT</code> in <code>WTF-LAB/BRIEF-V1.md §4</code> and behavioural class A-F/UNCODED in <code>WTF-000-A codebook</code>) — red highlight = gold says <code>B/UNSUPPORTED</code> or <code>E/CONTRADICTION</code>, not model says so. No model self-report trusted. Source badge shows <code>gold_id@sha256</code>.</div>
+<div style="margin-top:8px;border:1px solid #fecaca;background:#fef2f2;border-radius:8px;padding:8px;font:12px ui-monospace,monospace">Example row: <b>G-UD-003</b> — answer: B <span style="background:#fee2e2;padding:1px 6px;border-radius:4px">UNSUPPORTED</span> — gold: NEAR-OUT · contradiction class E — <span style="background:#fee2e2;padding:1px 6px;border-radius:4px">flagged red</span></div>
+</div>
+<div class="card">
+<h3>Export</h3><div class="kv">Complete Report Pack → <code>deliverable.zip</code> + <code>MANIFEST</code> + <code>verify.html</code> + <code>trail.html</code>. Promotion through claim gate only (<code>BRAND_BIBLE §19 + CLAIM_GATE</code>, TESTED vs UNTESTED).</div>
+</div>
+</div>

@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wire — Environment Room</title>
+<style>
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--accent:#1d3a5f;--card:#fff}
+*{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 system-ui,sans-serif}
+.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px}
+.nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+h1{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0;overflow:hidden}
+.box .head{padding:8px 10px;background:#f3ece1;border-bottom:1px solid var(--line);font-weight:600;font-size:12px;display:flex;justify-content:space-between}
+.term{font:12px/1.5 ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:10px;height:220px;overflow:auto}
+.kv{font-size:12px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line);background:#faf6ef}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+<div class="nav"><a href="control.html">Control</a><a class="active" href="environment.html">Environment</a><a href="timeline.html">Timeline</a><a href="live.html">Live</a><a href="evidence.html">Evidence</a></div>
+<h1>Environment Room — isolated sandboxes</h1><div class="sub">Heart of the laboratory. Each test is its own sealed terminal/world. V1 = terminal substrate (inspectable, replaceable).</div>
+<div class="grid">
+<div class="box"><div class="head"><span>TEST 001 — MODEL A · RUNNING</span><span style="color:#15803d">●</span></div><div class="term">$ run wtf-001<br>> model: analyst — fresh context<br>> prompt: S0 — cold start<br>> response: …<br>> tool: read inbox/file.csv → 3 rows<br>> sensor: token 412</div><div class="kv">Sandbox: <code>outputs/WTF-001/RUN-001/sandbox</code> — jailed, no upstream write</div></div>
+<div class="box"><div class="head"><span>TEST 002 — MODEL B · QUEUED</span><span style="color:#a16207">○</span></div><div class="term">$ queued — waiting for seal WTF-001<br>$ sealed sha256:9f…c1</div><div class="kv">Parallel 8 — other sandboxes isolated</div></div>
+<div class="box"><div class="head"><span>TEST 003 — HUMAN (V3) · READY</span><span style="color:#1d4ed8">◐</span></div><div class="term">$ human prompt: dilemma 17/80<br>$ response: scale 3/5<br>$ receipt: RESULT+EVIDENCE+METHOD…</div><div class="kv">V3 Human Axiom — same timeline, different subject</div></div>
+</div>
+</div>
