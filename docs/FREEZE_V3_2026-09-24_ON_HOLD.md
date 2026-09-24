@@ -1,6 +1,6 @@
-# FREEZE V3 — 2026-09-24 ON HOLD (awaiting full skill audit)
+# FREEZE V3 — 2026-09-24 ON HOLD (awaiting full skill audit) — HEAD b2fca7e
 
-**Status:** `ON HOLD` — frozen, sealed, not pushed, not deployed. Master `5c2c234` + Staging `96 passed` + smoke 5/5 at freeze.
+**Status:** `ON HOLD` — frozen, sealed, not pushed, not deployed. **At freeze:** Master `5c2c234` + Staging `96 passed` + smoke 5/5. **At this handoff (b2fca7e):** Staging `108 passed, 2 warnings + smoke 5/5` — `HARNESS_V1_REPRODUCIBLE_PASS` (`docs/HARNESS_V1_FINAL_ACCEPTANCE_2026-09-24.md` authoritative) — see `docs/HANDOFF_2026-09-24_FULL_ACCOUNT.md`. ON HOLD flag unchanged — do not un-hold without audit closure. Gates since freeze: `GATE 5 01c99af → COMMERCIAL ef3573e → TIGHTEN 70b8cf1 → DOCS b2fca7e`.
 
 **Impl hash (Staging) at freeze:** `ef3573e526c4af1255c55ef2a5cea8d1ed74838f` (HEAD 2026-09-24 via `git rev-parse HEAD` — was literal `$(git rev-parse HEAD)` before correction `01c99af→ef3573e`). Re-verified after save: `sha256:5748ca73b9adc66bc40f3c5e555245f5784fe7a5afdebb5d30fc2fb5491aba62` before correction, `rehashed after correction below`.
 **Cfg hash:** `WTF-005A-HASH-v3` `sort_keys True ensure_ascii False separators (",",":")` no indent — `axiom_harness/mission.py frozen=True` (Schedule/Parallel/Data/Language/Audio/Sensors/Live + Patch as V1.8 one room).
