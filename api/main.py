@@ -203,6 +203,25 @@ class H(BaseHTTPRequestHandler):
             except Exception as e:
                 self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
                 self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+        elif parsed.path.startswith("/api/master/multi-agent") or parsed.path.startswith("/master/multi-agent"):
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                if m.multi_agent is None:
+                    raise ValueError("failed_policy: multi_agent missing")
+                mc = m.multi_agent
+                if not mc.agents:
+                    raise ValueError("failed_policy: agents empty — requires at least one of A Analyst B Critic C Maker D Observer E Adversary")
+                # isolated contexts per §14/§62 — each agent isolated sandbox
+                body = {"multi_agent": True, "experiment_id": m.id, "agents": [a.value for a in mc.agents], "isolated": mc.isolated, "config_hash": m.protocol, "sealed": True}
+                self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
         else:
             self.send_response(404); self.end_headers()
 

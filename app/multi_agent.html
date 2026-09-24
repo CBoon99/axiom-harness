@@ -1,0 +1,95 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AXIOM Harness — Multi-agent Room</title>
+<link rel="stylesheet" href="app.css">
+<style>
+/* taste overrides — paper #faf6ef */
+.wrap{max-width:1120px;margin:0 auto;padding:16px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 14px}
+.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px;color:var(--ink)}
+.nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid5{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.kv{font-size:12px;color:var(--muted)}
+pre{font:11px/1.4 ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:10px;border-radius:8px;overflow:auto}
+</style>
+<div class="wrap">
+<header style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+<div>
+<div style="font-size:18px;font-weight:700;letter-spacing:-.02em">AXIOM Harness <span style="font-weight:400;color:var(--muted)">— Multi-agent Room V1.8</span></div>
+<div class="muted">Isolated contexts · comparative timeline · seal before GO · <code>ai_computed_metrics:false</code></div>
+</div>
+<div style="display:flex;gap:8px;align-items:center"><span class="tag" id="health">health: checking…</span><span class="tag">V1.8</span></div>
+</header>
+
+<nav class="nav" aria-label="Rooms">
+<a href="wireframes/control.html">Control</a>
+<a href="wireframes/environment.html">Environment</a>
+<a href="wireframes/timeline.html">Timeline</a>
+<a href="wireframes/live.html">Live</a>
+<a href="wireframes/evidence.html">Evidence</a>
+<a class="active" href="multi_agent.html">Multi-agent</a>
+<a href="index.html" style="margin-left:auto">App →</a>
+</nav>
+
+<div class="card">
+<h3 style="margin:0 0 6px;font-size:13px">Multi-agent — A Analyst · B Critic · C Maker · D Observer · E Adversary</h3>
+<div class="kv">Same mission, isolated sandboxes. Each agent gets its own context/memory/tools. Comparative timeline shows divergence. Seal is immutable — any change = new id.</div>
+<div class="grid5" style="margin-top:12px">
+<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>A · Analyst</span><span style="color:#1d4ed8">●</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:84px;overflow:hidden">reads brief → proposes compression 393k:1<br>tools: read inbox/doc</div><div class="kv" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef">isolated · 412 tok</div></div>
+<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>B · Critic</span><span style="color:#a16207">○</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:84px;overflow:hidden">challenges Analyst claim<br>trace: DEFENDED → CHALLENGED</div><div class="kv" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef">isolated · 298 tok</div></div>
+<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>C · Maker</span><span style="color:#15803d">●</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:84px;overflow:hidden">generates artefact → patch vectors<br>8 words from 576 tokens</div><div class="kv" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef">isolated · 340 tok</div></div>
+<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>D · Observer</span><span style="color:#5c5348">◐</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:84px;overflow:hidden">watches A/B/C — same feed<br>comparative delta visible</div><div class="kv" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef">isolated · observatory</div></div>
+<div style="border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)"><div style="padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between"><span>E · Adversary</span><span style="color:#991b1b">■</span></div><div style="font:11px ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:84px;overflow:hidden">probes boundary → attempt→denied<br>FAILED-POLICY evidence flagged</div><div class="kv" style="padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef">isolated · pressure probe</div></div>
+</div>
+<div class="kv" style="margin-top:8px">Each card is an isolated sandbox — click → full terminal drawer. 100s stay O(1) per row (virtual scroll, paginated API).</div>
+</div>
+
+<div style="display:grid;grid-template-columns:320px 1fr;gap:12px;margin-top:12px">
+<div class="card">
+<h3 style="margin:0 0 8px;font-size:13px">Seal multi-agent</h3>
+<label class="muted">Mission</label>
+<select id="missionSel" style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"><option>WTF-001</option><option>RUNSET-0047</option></select>
+<label class="muted" style="margin-top:8px;display:block">Agents (isolated)</label>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:13px">
+<label><input type="checkbox" checked value="Analyst"> A Analyst</label>
+<label><input type="checkbox" checked value="Critic"> B Critic</label>
+<label><input type="checkbox" checked value="Maker"> C Maker</label>
+<label><input type="checkbox" checked value="Observer"> D Observer</label>
+<label><input type="checkbox" checked value="Adversary"> E Adversary</label>
+</div>
+<label class="muted" style="margin-top:8px;display:block"><input type="checkbox" checked id="isolatedCk"> isolated sandboxes</label>
+<div style="display:flex;gap:8px;margin-top:10px">
+<button class="btn" id="sealBtn">Seal POST /master/multi-agent</button>
+<button class="btn ghost" id="badBtn">Send empty → 422</button>
+</div>
+<div id="sealOut" class="muted" style="margin-top:8px">Seal: —</div>
+<pre id="payloadPre" style="margin-top:8px">payload preview —</pre>
+</div>
+<div class="card">
+<h3 style="margin:0 0 8px;font-size:13px">Evidence & timeline</h3>
+<div class="kv">POST <code>/api/master/multi-agent</code> (alias <code>/master/multi-agent</code>) → <code>201 {multi_agent:true, agents, isolated, config_hash, sealed:true}</code> or <code>422 {failed_policy}</code>. Every 422 stored as intervention event, not suppressed. Timeline replays each agent's prompt/response/tools at same event time.</div>
+<pre style="margin-top:8px">201 {"agents":["Analyst","Critic","Maker","Observer","Adversary"],"config_hash":"sha256:9f…c1","experiment_id":"WTF-001","isolated":true,"multi_agent":true,"sealed":true}
+422 {"failed_policy":"failed_policy: multi_agent missing"}
+422 {"failed_policy":"failed_policy: agents empty — requires at least one …"}</pre>
+<div class="kv" style="margin-top:8px">Chain <code>B.prev=A.receipt</code> · <code>verify_result: {ai_computed_metrics:false}</code> · Video is presentation, not proof.</div>
+</div>
+</div>
+
+</div>
+<script>
+fetch('/api/master/health').then(r=>r.json()).then(j=>{document.getElementById('health').textContent='health: '+(j.ai_computed_metrics===false?'ai_computed_metrics:false OK':'bad')}).catch(()=>{document.getElementById('health').textContent='health: offline — serve at :8765'});
+function basePayload(agents){
+  return {id: document.getElementById('missionSel').value, protocol:"sha256:abc", context_kind:"FRESH", env_kind:"MULTI_AGENT", multi_agent:{agents:agents, isolated: document.getElementById('isolatedCk').checked}};
+}
+document.getElementById('sealBtn').onclick=()=>{
+  const agents=[...document.querySelectorAll('input[type=checkbox][value]')].filter(c=>c.checked).map(c=>c.value);
+  const body=basePayload(agents);
+  document.getElementById('payloadPre').textContent=JSON.stringify(body,null,2);
+  fetch('/api/master/multi-agent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(async r=>{const j=await r.json(); document.getElementById('sealOut').textContent=r.status+' '+JSON.stringify(j)}).catch(()=>{document.getElementById('sealOut').textContent='no server — stub recorded as sealed preview'});
+};
+document.getElementById('badBtn').onclick=()=>{
+  const body={id:"WTF-001", protocol:"sha256:abc", context_kind:"FRESH", env_kind:"MULTI_AGENT", multi_agent:{agents:[], isolated:true}};
+  document.getElementById('payloadPre').textContent=JSON.stringify(body,null,2);
+  fetch('/api/master/multi-agent',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(async r=>{const j=await r.json(); document.getElementById('sealOut').textContent=r.status+' '+JSON.stringify(j)}).catch(()=>{document.getElementById('sealOut').textContent='no server — expected 422 failed_policy: agents empty'});
+};
+</script>

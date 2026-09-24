@@ -103,6 +103,7 @@ class MasterMission(BaseModel):
     audio: Optional["AudioConfig"] = Field(default=None, description="V1.5 Speech/Audio — §18-19, first-class audio modality")
     sensors: Optional["SensorConfig"] = Field(default=None, description="V1.6 Sensors — §28, identity/source/timestamp/permission/status/policy/schema")
     live: Optional["LiveConfig"] = Field(default=None, description="V1.7 Live feeds + Observatory — §30-32, same stream isolated contexts")
+    multi_agent: Optional["MultiAgentConfig"] = Field(default=None, description="V1.8 Multi-agent — A Analyst B Critic C Maker D Observer E Adversary, isolated")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
 
@@ -123,6 +124,32 @@ class LiveConfig(BaseModel):
     observatory: bool = Field(default=False, description="§31-32 multi-model comparative observation, same feed isolated")
     models: Optional[list[str]] = Field(default=None, description="observatory model set — each isolated context")
     compare: bool = Field(default=True, description="parallel timeline compare §32")
+
+
+class AgentRole(str, Enum):
+    ANALYST = "Analyst"
+    CRITIC = "Critic"
+    MAKER = "Maker"
+    OBSERVER = "Observer"
+    ADVERSARY = "Adversary"
+
+
+class MultiAgentConfig(BaseModel):
+    model_config = {"frozen": True}
+
+    enabled: bool = Field(default=False, description="V1.8 enable flag — default False, isolated §14")
+    agents: list[AgentRole] = Field(
+        default_factory=lambda: [
+            AgentRole.ANALYST,
+            AgentRole.CRITIC,
+            AgentRole.MAKER,
+            AgentRole.OBSERVER,
+            AgentRole.ADVERSARY,
+        ],
+        description="5 agents A Analyst B Critic C Maker D Observer E Adversary — isolated §14/§62 — default ['A','B','C','D','E'] aliases",
+    )
+    isolated: bool = Field(default=True, description="each agent isolated context/memory/tools")
+    parallel: int = Field(default=1, ge=1, le=16, description="parallel shards 1..16, isolated §14/§62")
 
 
 class SensorKind(str, Enum):
