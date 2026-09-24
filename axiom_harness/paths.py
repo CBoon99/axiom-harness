@@ -6,8 +6,12 @@ from pathlib import Path
 from urllib.parse import unquote
 
 STAGING_ROOT = Path(__file__).resolve().parents[1]
-# alias assertion — must resolve under "Axiom Harness-Master - Dont Touch/Staging"
-assert "Axiom Harness-Master - Dont Touch/Staging" in str(STAGING_ROOT) or "Axiom Harness Master" in str(STAGING_ROOT), f"STAGING_ROOT mis-located {STAGING_ROOT}"
+# Portability fix (REPAIR PHASE 2): repository-root discovery — no absolute/name-dependent assertion.
+# Harness must run from any clone path containing expected Staging layout (axiom_harness/ + missions/ + tests/)
+# Previously asserted "Axiom Harness-Master - Dont Touch/Staging" in path — forced exact absolute directory name.
+# Now assert structure, not name: STAGING_ROOT must contain axiom_harness/ and be a Staging checkout.
+if not (STAGING_ROOT / "axiom_harness").is_dir() or not (STAGING_ROOT / "missions").is_dir():
+    raise RuntimeError(f"STAGING_ROOT mis-located {STAGING_ROOT}: expected Staging layout (axiom_harness/ + missions/)")
 
 # inside Master, writable
 STAGING_DOCS = STAGING_ROOT / "docs"
