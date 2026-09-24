@@ -63,6 +63,8 @@ class H(BaseHTTPRequestHandler):
     def log_message(self, *a): pass
 
 if __name__=="__main__":
-    s=HTTPServer(("127.0.0.1",8765),H)
-    print("api on http://127.0.0.1:8765")
+    import os
+    port = int(os.environ.get("HARNESS_PORT", "8765"))
+    s=HTTPServer(("127.0.0.1",port),H)
+    print(f"api on http://127.0.0.1:{port}")
     s.serve_forever()
