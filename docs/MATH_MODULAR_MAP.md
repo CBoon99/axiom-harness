@@ -1,18 +1,33 @@
-# MATH MODULAR MAP — V3 Freeze (no hardcoded burial)
-**Single hash contract:** `sort_keys True, ensure_ascii False, separators (",",":")` no indent — `WTF-005A-HASH-v3` via `axiom_harness/manifest.py:15` + `api/main.py:17`
+# MATH MODULAR MAP — REGISTRY ONLY (not source of truth)
+**Gate 2 — 2026-09-24 — Staging only, Master frozen**
+**Single hash contract:** `sort_keys True, ensure_ascii False, separators (",",":")` no indent — `WTF-005A-HASH-v3` via `axiom_harness/manifest.py:15`
 
-| Component | Formula / Code Location | Constant | Threshold | Weight | Config Source |
-|-----------|------------------------|----------|-----------|--------|---------------|
-| **Evidence Axiom** `living_gap_review_score.py:SCORER_VERSION 0.1.0` | `evidence_layer_freeze_retrieval_v1` — docs-only hash, CLAIMS.json excluded | — | — | — | `FreezeEvidenceIndex` + `scorer_version` frozen |
-| **Future Workbench** `seal_pair` `B.prev=A` | `axiom_harness/manifest.py:20` chain pointer | — | — | — | `protocol/hash_contract.py` |
-| **PER Telescope** `PER-Core/sim/telescope.py:18` | `IG = log2(Nb/Na)`, descend if `|R|≤3 OR weight≥75 OR entropy≥4` (OR gate) — **owned by PER, not Harness** | `HYPOTHESIS_WEIGHTS {1:0.1..6:60}, desc_candidates 3, weight 75, entropy 4, bonus 8, ent*1.5 cap95, layers >20/5/3` — **PER canonical** | `min_candidates 3` | `weight 75` | **PER owns** `Telescope(descend_threshold_*)` — Harness records hash only |
-| **ECA Telescope** `ECA/sim/telescope.py:101-162` | `GateOk = |R|≤3 && ΔH>0.5 && sealed+hash && FALSIFY P2 && discrimination` (AND gate) — **owned by ECA, not Harness** | `ALLOWED_AXES 12, ε=max(0.05,1/|Rt|), T_max(N)=ceil(log2(N/3))+4` — **ECA canonical** | `min_delta_h 0.5` | `K values 60,30…` | **ECA owns** thresholds via `ECA/plugin/eca_config.json` (removed competing Harness copy) — Harness records `ECA_CONFIG_HASH` only |
-| **PER-IG** passive tachometer | `ΔH` measured, no gate | — | — | — | read-only |
-| **EvoCycles** nested worlds | `harness_` ids, `B-0` physics, `WORLD-A` | — | — | — | `World-A-EvoCycles` repo |
-| **Testing / Epistemic** `WTF-005A/B/LAB` `EU-01…06` | 6A loop (ask → probe → evidence → interpret → report → reflect) | `S0→S1→S2 branching` | `NUM_RE orphan check` | — | `Harness mission.py:Schedule/Parallel` |
-| **Harness Schedule** `mission.py:ScheduleConfig` | `ONCE/INTERVAL/REPEATING/CONTINUOUS/UNTIL/CRON` | `interval>0` | `repeats>0` for REPEATING | — | `ScheduleConfig frozen` + `POST /api/master/schedule 422` |
-| **Harness Parallel** `mission.py:ParallelConfig` | `ONE/SEQUENCE/ALL/PARALLEL` | `parallel_count 1..64` | `64 cap` | `model_matrix [A-D]` | `ParallelConfig frozen` |
-| **Harness Data** `mission.py:DataConfig` | `CSV/JSON/TEXT/DOCS/DATASET/IMAGES/AUDIO/VIDEO` | — | `sources non-empty` | — | `DataConfig + jail is_safe_relative` |
-| **Harness Language/Audio/Sensors/Live** | `LanguageCode 10, AudioSourceKind 6, SensorKind 6, LiveFeedKind 6` | — | `primary not in variants` | — | each `frozen=True` + `POST 201/422` |
+This map does **not** duplicate upstream mathematics. It records **what Harness knows** about each upstream: identity, version, hash, interface, status. Formulas/thresholds remain owned by upstreams — Harness only records hashes.
 
-All constants hash via `MasterMission protocol` — changing any threshold creates new `id`, not silent patch. Harness never reimplements `axiom_wb/metrics`.
+## Upstream Registry — actual committed state + hashes + interfaces
+
+| PROJECT | OWNER | CANONICAL_FILE | IMPLEMENTATION_HASH (sha256:16) | CONFIG_HASH | VERSION | INTERFACE | STATUS |
+|---------|-------|----------------|----------------------------------|-------------|---------|-----------|--------|
+| **Evidence Axiom** | Axiom Evidence Layer | `docs/gap-review/harness/living_gap_review_score.py` | `60c94d95173a34ab` | scorer `0.1.0` `evidence_layer_freeze_retrieval_v1` | 0.1.0 | `FreezeEvidenceIndex, scorer_version` | **UPSTREAM-BLOCKED** — not Harness-certified (see `WORKING.md` BML Quad Frozen Evaluator) |
+| **PER** | `Axiom PER (Progressive Evidence Retrieval)` | `PER-Core/sim/telescope.py` | `7ae692a5cfbe5fcf` | UNKNOWN — no separate committed config audited (weights in code `HYPOTHESIS_WEIGHTS`) | UNKNOWN | `Telescope(index).score_probes()` | **UPSTREAM-BLOCKED** — do not certify clean based on Harness readings |
+| **ECA** | `Axiom Evidence Layer/ECA` | `ECA/sim/telescope.py` | `bf7329c836d8b820` | UNKNOWN — prior `ECA/plugin/eca_config.json` was Harness-created competing config (deleted `rm` 2026-09-24); ECA owns canonical, not Harness | UNKNOWN (ECA/spec `1.2`) | `Telescope + GateOk + FALSIFY P2 + evidence_gate` | **UPSTREAM-BLOCKED** — unresolved reproducibility/dependency per ECA V1 §12 (do NOT certify clean; Harness records boundary only) |
+| **Future Workbench** | `Axiom-Workbench` | `axiom_wb/pipeline.py` | `e8fbd398675f7112` | `seal_pair B.prev=A` via `manifest.py:20` | UNKNOWN | `python3 -m axiom_wb evaluate` | **UPSTREAM-BLOCKED** — read-only, not Harness-certified |
+| **EvoCycles** | `World-A-EvoCycles` | `WORLD-A/*` | UNKNOWN — NOT AUDITED (no hash computed this gate) | UNKNOWN | UNKNOWN | `harness_ ids, B-0 physics` | UNKNOWN — NOT AUDITED |
+| **Testing Harness** | `Axiom Harness` | `WTF-005A/B/LAB` | UNKNOWN | UNKNOWN | UNKNOWN | `EU-01…06 6A loop` | UNKNOWN — NOT AUDITED |
+| **Epistemic-UX** | `Epistemic-UX-Stress-Harness` | `EU-01…06` | UNKNOWN | UNKNOWN | UNKNOWN | `6A loop` | UNKNOWN — NOT AUDITED |
+
+**For formulas/thresholds/weights/gates:** REFERENCE upstream owner — see `ECA/sim/telescope.py:101-162` for `GateOk`, `PER-Core/sim/telescope.py:18` for `IG`, `Axiom-Workbench/baselines.py` for `EMA span20` etc. — **no threshold in this map becomes Harness-authoritative**. No `ECA maths`, `PER maths`, `Evidence Axiom maths`, `Future maths` reproduced as Harness logic.
+
+## Harness Orchestration Registry — Harness-owned (LOAD/CONFIGURE/FREEZE/RUN/RECORD/SEAL)
+
+| HARNESS CONFIG | CODE LOCATION | HASHED VIA | STATUS |
+|----------------|---------------|------------|--------|
+| `ScheduleConfig` `ONCE/INTERVAL/REPEATING/CONTINUOUS/UNTIL/CRON` | `axiom_harness/mission.py:ScheduleConfig` | `MasterMission protocol` `WTF-005A-HASH-v3` | HARNESS-OWNED `frozen=True` |
+| `ParallelConfig` `ONE/SEQUENCE/ALL/PARALLEL 1..64` | `mission.py:ParallelConfig` | `protocol` | HARNESS-OWNED |
+| `DataConfig` `CSV/JSON/.../VIDEO` jail | `mission.py:DataConfig` | `protocol` | HARNESS-OWNED |
+| `LanguageConfig` 10 codes | `mission.py:LanguageConfig` | `protocol` | HARNESS-OWNED |
+| `AudioConfig` 6 kinds | `mission.py:AudioConfig` | `protocol` | HARNESS-OWNED |
+| `SensorConfig` 6 kinds | `mission.py:SensorConfig` | `protocol` | HARNESS-OWNED |
+| `LiveConfig` 6 feeds | `mission.py:LiveConfig` | `protocol` | HARNESS-OWNED |
+
+Harness **does not** own upstream thresholds — it only records `IMPLEMENTATION_HASH` + `CONFIG_HASH` received from upstream via `adapters/per_eca.py` transport. No duplicated ECA/PER maths remains in `axiom_harness/` (verified `rg GateOk → 0 hits` in Harness `axiom_harness/*.py`).
