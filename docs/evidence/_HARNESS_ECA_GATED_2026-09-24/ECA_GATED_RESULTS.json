@@ -1,0 +1,2785 @@
+{
+  "cases": [
+    {
+      "case_id": "GR-PARA-03-P3-01",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention period is sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-02",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention period is 60 days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-03",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention for records is sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-04",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The retention period for closed-period records is sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-05",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The policy states retention as sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-06",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Sixty-day retention applies to closed-period records",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-07",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention period is sixty days for the closed period",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-08",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention is sixty days per the freeze excerpt",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-09",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention period stated as sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-10",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The freeze confirms retention of sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-11",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A covers the dwelling",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-12",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A covers the dwelling on the residence premises",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-13",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The dwelling on the residence premises is covered by Coverage A",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-14",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A provides dwelling coverage on the residence premises",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-15",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Dwelling coverage under Coverage A is confirmed",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-16",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The residence premises dwelling is insured by Coverage A",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-17",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A is the dwelling coverage",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-18",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A applies to the dwelling",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-19",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The dwelling falls under Coverage A",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-20",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A dwelling protection is stated",
+      "expected": "Supported",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-21",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention period is sixty days and may be waived on request",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-22",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The retention period may be waived without condition",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-23",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Waiver of retention review is permitted",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-24",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention may be waived at any time",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-25",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Sixty-day retention is waivable on request",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-26",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage may be waived on request",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-27",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The dwelling coverage may be waived",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-28",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A covers the dwelling without endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-29",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Retention period is sixty days without endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-30",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A applies without endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-31",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "The dwelling is covered without an endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-32",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Sixty-day retention applies without endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-33",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "No endorsement required for Coverage A dwelling protection",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-34",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A dwelling coverage requires no endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-35",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A covers the dwelling and contents",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-36",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A includes dwelling and contents coverage",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-37",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Contents are covered under Coverage A along with the dwelling",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-38",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A covers the dwelling and contents on the residence premises",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-39",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Dwelling and contents are both covered by Coverage A",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-PARA-03-P3-40",
+      "fixture": "GR-PARA-03-001",
+      "claim_text": "Coverage A provides coverage for the dwelling and personal contents",
+      "expected": "Needs_info",
+      "world_hash": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-CTRL-01",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Widget Alpha unit price is 100 GBP",
+      "expected": "Supported",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-CTRL-02",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Interest rate is 5% for Q1 2024",
+      "expected": "Supported",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-01",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Widget Alpha unit price is 100 USD for Q2 2024",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-02",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Widget Alpha unit price is 100 EUR for FY 2024",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-03",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Interest rate is 5% for Q2 2024 USD",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-04",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Widget Beta unit price is 40 EUR for Q1 2024",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-05",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Widget Alpha unit price is 100 USD for FY 2024",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-06",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Interest rate is 5% for Q1 2025",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-07",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Interest rate is 5% for FY 2024 EUR",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-DRIFT-03-DRIFT-08",
+      "fixture": "GR-DRIFT-03-001",
+      "claim_text": "Widget Beta unit price is 40 GBP for Q2 2024",
+      "expected": "Needs_info",
+      "world_hash": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-01",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Retention period is sixty days",
+      "expected": "Supported",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-02",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Ops desk is the retention owner",
+      "expected": "Supported",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-03",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Coverage A covers the dwelling on the residence premises",
+      "expected": "Supported",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-04",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "We do not cover land, including land on which the dwelling is located",
+      "expected": "Supported",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-05",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "We cover personal property owned or used by an insured while it is anywhere in the world",
+      "expected": "Supported",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-06",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Widget Alpha unit price is 100 GBP",
+      "expected": "Supported",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-07",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Waiver of retention review is permitted",
+      "expected": "Needs_info",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-08",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Service level is 99.99% uptime",
+      "expected": "Needs_info",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-09",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Widget Alpha unit price is 100 USD",
+      "expected": "Needs_info",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-10",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Coverage A covers the dwelling and contents",
+      "expected": "Needs_info",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-11",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Advice: safely commit go-live next Monday",
+      "expected": "Needs_info",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-PLUG-CHAT-CHAT-12",
+      "fixture": "GR-PLUG-CHAT",
+      "claim_text": "Flood damage to the dwelling is covered under Coverage A without endorsement",
+      "expected": "Needs_info",
+      "world_hash": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304"
+    },
+    {
+      "case_id": "GR-AGENT-01-AG-01",
+      "fixture": "GR-AGENT-01",
+      "claim_text": "Closed-period NPS score is 64",
+      "expected": "Supported",
+      "world_hash": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296"
+    },
+    {
+      "case_id": "GR-AGENT-01-AG-02",
+      "fixture": "GR-AGENT-01",
+      "claim_text": "Support channel SLA target is four hours first response",
+      "expected": "Supported",
+      "world_hash": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296"
+    },
+    {
+      "case_id": "GR-AGENT-01-AG-03",
+      "fixture": "GR-AGENT-01",
+      "claim_text": "Advice: cut support staffing by half next sprint",
+      "expected": "Needs_info",
+      "world_hash": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296"
+    },
+    {
+      "case_id": "GR-AGENT-01-AG-04",
+      "fixture": "GR-AGENT-01",
+      "claim_text": "Per DOC-AGENT-GHOST, NPS will reach 80 next quarter",
+      "expected": "Needs_info",
+      "world_hash": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296"
+    }
+  ],
+  "observed": [
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-01",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-01",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-01",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:9bb954eb94687c159af1e6d509be6a22dab7d7b18161e995e2ce8c82304459aa",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 129,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-02",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-02",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-02",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:36a25b9197e7715aeb0803ef6754c10f095847a8af477754b4c57abfbe3a0948",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-03",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-03",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-03",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a49291e22ba956c7396bd97a4600a02b6c0ab21f4072e5d014e0b51eb62a80cd",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-04",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-04",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-04",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:134ed7bb46f79726582acae7b7a24af4a9aa81396365f096e013b901b9104dcf",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 133,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-05",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-05",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-05",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:ebda1e4746c219dea9d1a0e012a4e91e8c48c27f6c03de052ff21f9d65c83606",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-06",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-06",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-06",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:dc0e499835dfb3ec17f1ee46a66fc3eaa6909f646e34d86378d21324c2306c52",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 132,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-07",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-07",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-07",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:68582562169bea7efa1d475d61aab79d19189a4a613636757140ddf0c75e634f",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 133,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-08",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-08",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-08",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:19fa72733d321b8d657674f69b2745c71c01f7e9e72c3e160e5070da512aa33a",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 132,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-09",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-09",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-09",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:0fab6b1d0e27367488f15d8dc1d8f45e6f5be8de35c0e066fd301fafc6cb6277",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-10",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-10",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-10",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:26404676aad98401966649e6e4235b3926f96eb7c17dcbddeb4149625b84ab04",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-11",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-11",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-11",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a38be3e398af7250818390db54a26c8472b4156ad582a715df7a76fa711d626c",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 128,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-12",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-12",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-12",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:4832be73b4662938a3dba10d059e73982b38106ba4b58ece4e3f43aae0f8aafe",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 132,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-13",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-13",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-13",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:19d8f607795fd3861fbae2c581b0e4d2ec58452712ecb0553c8a6e40ba910f5b",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 134,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-14",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-14",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-14",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a5120dd14aa4ed0d7dc5ff4769a5e92469db46bbdf7e35235465f62ee4b2b709",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 132,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-15",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-15",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-15",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:610aa9144065a0facbd2dca6a7c3e309ba4323a3f6906504cddba060be52d204",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 131,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-16",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-16",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-16",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a80af12fb11eb8f19b8c77faaff52c8af99574f19e9d34f85340eefd1cca32e9",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "MODEL_EXECUTION_BLOCKED",
+        "FINAL_DECISION": "MODEL_EXECUTION_BLOCKED",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0,
+        "provider_status": "Request timed out.",
+        "TOKEN_USAGE": 0,
+        "model_response": "Request timed out.",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": false
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-17",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-17",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-17",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a3d1af70ecdf61812ee09d231c32220051cbe1d35f0db014337265e40dd861b5",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "MODEL_EXECUTION_BLOCKED",
+        "FINAL_DECISION": "MODEL_EXECUTION_BLOCKED",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0,
+        "provider_status": "Request timed out.",
+        "TOKEN_USAGE": 0,
+        "model_response": "Request timed out.",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": false
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-18",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-18",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-18",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:4f536f0e9d24aee2328ea8356e8cbe536ffd6135b2c1e42deffde43a4ea3f9d3",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "MODEL_EXECUTION_BLOCKED",
+        "FINAL_DECISION": "MODEL_EXECUTION_BLOCKED",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0,
+        "provider_status": "Request timed out.",
+        "TOKEN_USAGE": 0,
+        "model_response": "Request timed out.",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": false
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-19",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-19",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-19",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:4dd9adefec0f1c3a5a5f377ccb95db091ccf1aec95c7869fc41e97247e54eb68",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 129,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-20",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-20",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-20",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:04484c0ca6520e85f29d1f7a34dde473d76e7b1c324ca8b1bd00aace111e57f2",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 129,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-21",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-21",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-21",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:69ba391c2ce42cb495f6426a187ddcff944ffa92f555883409533eae6dbe2fea",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 135,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-22",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-22",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-22",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:fd64fb1e7038b631be9599556db90024d449b400d9e809d4183343170c87813f",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 132,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-23",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-23",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-23",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:67a350b265633d792d954b1b78bb87c3846d8706eab4f6c34f46810c5ae1e7aa",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "MODEL_EXECUTION_BLOCKED",
+        "FINAL_DECISION": "MODEL_EXECUTION_BLOCKED",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0,
+        "provider_status": "Request timed out.",
+        "TOKEN_USAGE": 0,
+        "model_response": "Request timed out.",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": false
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-24",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-24",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-24",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:3948f6129109e81a64fdb9c6d059e6d57a8af0b085a1744be6c7353d3d151073",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 131,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-25",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-25",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-25",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:3f05f6ed7e19158212af5f5b062e25e54dde43b425ae1cd1f2fe396c54eeff37",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 132,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-26",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-26",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-26",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:f9bd3a6ca290f49a115dd133c9dad9725923cab7e08dbe8a628a29b642314ea2",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 129,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-27",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-27",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-27",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:fd7982e79b9a4be078cf23e7032742df6c6911df4025a908874aee42921bb38b",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-28",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-28",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-28",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:6df5e70d9ee83e23d567f912521fd790f7be680fe48610a5c1307a9facf05abe",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-29",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-29",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-29",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:6a714d744dd378ce5289171d22225bbca3cad2329dbcc62a6903f18aa3085788",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 131,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-30",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-30",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-30",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:08edbe9a1239f64126f997ab8e933d9854a2f7c60d7c774a90aee3e6f32ccdff",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 128,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-31",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-31",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-31",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:f7aceb7a2524860fcfd1dd50120f27e4d712be496f6a501c67bb58f209c2de54",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-32",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-32",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-32",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:f3655a74d013e533674f8ea724db44216cec95bcab10ee895a6ee68e40500063",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-33",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-33",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-33",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:530b3b68bb576989402f1dd4d57dd69f001966dea367c4153cdbdddc94cc03d9",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 131,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-34",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-34",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-34",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:15fce001ab22e9264c19ed3d3b66690921a2daa5c715a7acf77bfdc35053adc6",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-35",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-35",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-35",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:76cd10a41944b679908c844971f5a601efe0fe0cb5dc952f29814be804dfecc0",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 131,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-36",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-36",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-36",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:788467ddba74d0d2f462ccf33dc859a7c6dbec4826826681c01aafa71b0b2124",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 130,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-37",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-37",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-37",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:f4a412c9a906cecc0e7a18b159aa5d26f981e275a5d30026f9abc8977b3cf631",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 133,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-38",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-38",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-38",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:173f589aa18f769a2dffb88656458c00e004ecff35e40ee5d5f34fdc42b8ee8d",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 134,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-39",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-39",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-39",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:0053f90f28f7d263e6760b04ccc84701ef3bbeb0a6c239f76c083e693d17f3ee",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 133,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PARA-03-P3-40",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PARA-03-P3-40",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PARA-03-P3-40",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:f64b108ce7cc93cba51dc30bc1de531ac19c5f4603df578a1ee88951453fbcd7",
+        "WORLD_HASH": "sha256:87aafff878915788d5381a71ee2869c7b991500009102e161b6bfb286cea39fd",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 133,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-CTRL-01",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-CTRL-01",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-CTRL-01",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:af1e064773d38868f63b758a7ca57abc12d2bd89a98bd5056a5b3d2bf2669a7b",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 163,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-CTRL-02",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-CTRL-02",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-CTRL-02",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:94d4a454392fe9eca61cb792d1851b2c474ddea39183100a7a458f58aabfa5c1",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 167,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-01",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-01",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-01",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:31bebf65b69969b898d345a2a95fdd44fa28f5523b0cf358612d212b2f6d4a86",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 170,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-02",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-02",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-02",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:54572c7ddbf05602c6858f37e327f75de8de96d1711d13186f2de2a9ec64fba2",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 169,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-03",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-03",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-03",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:1b8967f2a6ff44a04cd04e0a2ef123a33a6c1ae7223863536f1eefa882e7d575",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 169,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-04",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-04",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-04",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:84134425fe7631985704804edc92d3a36c3ee1b62d9c1478418bfe975df0c2ab",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 170,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-05",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-05",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-05",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:2422e94a9d1d7f166da18e0d1f7a892a46fc3333bc2c026bb453f893e6adb25d",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 169,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-06",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-06",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-06",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:4c0a922e906305bf7d9bc3d805ec21b81fdc92e58a6cc14c3cb64a8b86c5762f",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 168,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-07",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-07",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-07",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:dcb65a6e7f60306ca666b036f4e6e328431791361b51b360359772bc589b7744",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 168,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-08",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-08",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-DRIFT-03-DRIFT-08",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:01443c4708b90e58dbcdd24b2b5adfe854fa3984bb7c313b5dbf9bf2ddefdf2b",
+        "WORLD_HASH": "sha256:a9605ebc726c15b783e32e59d994c53469d46bb02ea95c03a00d1989a5c4190e",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 170,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-01",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-01",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-01",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:5857a59e07ac9a4ae3c746a1d4b1cd20c76e3df2e48b7ea182279b78bd881d6c",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 621,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-02",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-02",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-02",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:bad72b6f4886494ea39c9d0e5ae2303721c8a9f13bad4e66870b0a364c0e245c",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 621,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-03",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-03",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-03",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:c774d38137df94cc038416f1b59f81eb8f5f647d5f4344d1bcef9150d76d1bec",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 624,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-04",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-04",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-04",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:1c07c54b1b5f9f2ba31336a9bfeef3fe488a704163374d1093bf9bc9f31c26c7",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 629,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-05",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-05",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-05",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:2ea96d09cc8dbe8e2b7300ac852792744b13e8447bfcc7a8970e06611ba7798e",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 632,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-06",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-06",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-06",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:d092846c4b578bec96c45310de35a79b231c0ef2753b04cee178b5f294d53ef4",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 623,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-07",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-07",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-07",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a42060a80489d4b6ff3616586416e3d8fc0d6331b5afa24cc29598b98e382fec",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 623,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-08",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-08",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-08",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:485d68076e339689b94e87388be4d5a9e870bf2fe34ae79d1c6d57234562561a",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 624,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-09",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-09",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-09",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:9c4e1d46a05aa5719bc2ac2ede0b6139494cd4fc7f657438be2eee0d9685055f",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 623,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-10",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-10",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-10",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:f4a87d37ee7df272dc9deb4968d02de66e0f0403fe85b25331c8b4820aecb2e9",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 622,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-11",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-11",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-11",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:941db6c0b215023119faf2c6b62a89bb0fa1e007c17311d02b140c6282ba8a7d",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_BLOCKED: |R|=0 \u0394H=0.0 gate=REFUSE (ECA would block hallucinated Supported)",
+        "GATED": true,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 623,
+        "model_response": "Supported",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": false,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-12",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-12",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-PLUG-CHAT-CHAT-12",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:dde12f84d4933d954d424607862c7cf85c1e7ff24b2aec76d90b6d08e61e7009",
+        "WORLD_HASH": "sha256:6a2527970cf59c7abab80de8ae107dd35a7247562169fb8b08f029e555958304",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 628,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-AGENT-01-AG-01",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-AGENT-01-AG-01",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-AGENT-01-AG-01",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:a5d30a011c4107caa48ddcf77b22f45323229a4dcead0bc62cc90eee776ab452",
+        "WORLD_HASH": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 390,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-AGENT-01-AG-02",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-AGENT-01-AG-02",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Supported",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-AGENT-01-AG-02",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:3d48e99c0f6b8703b21ec2c42cbc43ef8f34abf002a6c82cf561b5535db2593c",
+        "WORLD_HASH": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Supported",
+        "FINAL_DECISION": "Supported",
+        "ECA_STATE": "ECA_PASSED: |R|=1 \u0394H=1.2 gate=DESCENT_GRANTED",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 392,
+        "model_response": "Supported",
+        "EXPECTED": "Supported",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-AGENT-01-AG-03",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-AGENT-01-AG-03",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-AGENT-01-AG-03",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:02461f03660d8e081c6c0240bac39f8302c608b1042b21248b47e320988d8fc7",
+        "WORLD_HASH": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 392,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    },
+    {
+      "axiom": {
+        "CASE_ID": "GR-AGENT-01-AG-04",
+        "ACTOR": "EVIDENCE_AXIOM",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "per": {
+        "CASE_ID": "GR-AGENT-01-AG-04",
+        "ACTOR": "PER",
+        "FINAL_DECISION": "Needs_info",
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 0
+      },
+      "boon_gated": {
+        "CASE_ID": "GR-AGENT-01-AG-04",
+        "ACTOR": "BOONAI\u2192ECA (gated)",
+        "INPUT_HASH": "sha256:e77935898b8fcd9555e97de32df14a882260f425c6c3606f86403ae7d013251c",
+        "WORLD_HASH": "sha256:3acf50ea282d6578318a3b1d614496e5305dfc49cc2d8518331e0bca84bb7296",
+        "MODEL": "meta/llama-3.2-11b-vision-instruct",
+        "FINAL_DECISION_RAW": "Needs_info",
+        "FINAL_DECISION": "Needs_info",
+        "ECA_STATE": "ECA_NA (Needs_info)",
+        "GATED": false,
+        "EXECUTION_STATUS": "EXECUTED",
+        "llm_calls": 1,
+        "provider_status": "200",
+        "TOKEN_USAGE": 398,
+        "model_response": "Needs_info",
+        "EXPECTED": "Needs_info",
+        "CORRECT_RAW": true,
+        "CORRECT_GATED": true
+      }
+    }
+  ],
+  "created_at": "2026-09-24T05:34:06.077247+00:00",
+  "ai_computed_metrics": false,
+  "model": "meta/llama-3.2-11b-vision-instruct",
+  "total_cases": 66,
+  "raw_correct": 42,
+  "gated_correct": 62,
+  "blocked": 20
+}

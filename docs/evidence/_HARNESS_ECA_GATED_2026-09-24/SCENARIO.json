@@ -1,0 +1,7 @@
+{
+  "scenario_id": "HARNESS-ECA-GATED-01",
+  "experiment_id": "HARNESS-ECA-GATED-01",
+  "frozen_sample_dataset_hash": "sha256:87aafff87...",
+  "description": "Harness Evidence Room mirror of Evidence Layer ECA-gated 62-claim (Axiom Harness observes ECA gate, does not reinterpret)",
+  "ai_computed_metrics": false
+}

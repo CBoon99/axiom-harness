@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "outputs/_HARNESS_ECA_GATED_2026-09-24/DECISION_SUMMARY.json",
+      "sha256": "sha256:3ac14b62a7af6930c61e4d2995200c950422128fa40f7f123f16d4866975c7e2"
+    },
+    {
+      "path": "outputs/_HARNESS_ECA_GATED_2026-09-24/ECA_GATED_RESULTS.json",
+      "sha256": "sha256:d93debc37e0a6e8d1bc546fc1d5023cf274cc6e82e9bbefdb503943d72fdd1e6"
+    },
+    {
+      "path": "outputs/_HARNESS_ECA_GATED_2026-09-24/MATRIX.csv",
+      "sha256": "sha256:ff1cec20a16a7a92a6a47a49ba352ea741b790f70565799bc114e2a73890a45f"
+    },
+    {
+      "path": "outputs/_HARNESS_ECA_GATED_2026-09-24/SCENARIO.json",
+      "sha256": "sha256:d8c28d87ce4a32ee6dddc491dd9ff66b045e1e9d35b1e5985b0e67195645db42"
+    },
+    {
+      "path": "outputs/_HARNESS_ECA_GATED_2026-09-24/scenario.csv",
+      "sha256": "sha256:ef882ff8798a7f1ee954e39b505c0ddae8047b84f21128700aef05601ba0dbe3"
+    },
+    {
+      "path": "outputs/_HARNESS_ECA_GATED_2026-09-24/verify_result.json",
+      "sha256": "sha256:01bd394bcd3b19c11c9759d11cffc74931d492952043fef0d1f29a25a2809f1f"
+    }
+  ]
+}

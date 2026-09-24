@@ -1,0 +1,11 @@
+{
+  "ai_computed_metrics": false,
+  "axiom_correct": 66,
+  "blocked": 20,
+  "files": 2,
+  "frozen_at": "2026-09-24T05:34:06.084673+00:00",
+  "gated_correct": 62,
+  "pack_id": "_3WAY_ECA_GATED_2026-09-24",
+  "raw_correct": 42,
+  "total_cases": 66
+}

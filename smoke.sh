@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
+: "${HARNESS_PORT:=8766}"
+export HARNESS_PORT
+# HARNESS_PORT 8766 — harness run port (api/main.py honors $HARNESS_PORT)
 echo "== Axiom Harness smoke (no network — TestClient) =="
 
 echo "[1] GET /health derives real state"

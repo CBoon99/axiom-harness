@@ -1,0 +1,17 @@
+case,expected,axiom,per,boon_raw,boon_gated
+GR-PARA-03-P3-01,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-02,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-03,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-04,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-05,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-06,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-07,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-08,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-09,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-10,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-11,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-12,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-13,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-14,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-15,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-16,Supported,Supported,Supported,MODEL_EXECUTION_BL

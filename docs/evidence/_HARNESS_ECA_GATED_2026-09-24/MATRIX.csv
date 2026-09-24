@@ -1,0 +1,67 @@
+CASE,EXPECTED,AXIOM,PER,BOON_RAW,BOON_GATED,GATED,CORRECT_RAW,CORRECT_GATED,ECA_STATE
+GR-PARA-03-P3-01,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-02,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-03,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-04,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-05,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-06,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-07,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-08,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-09,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-10,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-11,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-12,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-13,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-14,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-15,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-16,Supported,Supported,Supported,MODEL_EXECUTION_BLOCKED,MODEL_EXECUTION_BLOCKED,False,False,False,ECA_NA (Needs_info)
+GR-PARA-03-P3-17,Supported,Supported,Supported,MODEL_EXECUTION_BLOCKED,MODEL_EXECUTION_BLOCKED,False,False,False,ECA_NA (Needs_info)
+GR-PARA-03-P3-18,Supported,Supported,Supported,MODEL_EXECUTION_BLOCKED,MODEL_EXECUTION_BLOCKED,False,False,False,ECA_NA (Needs_info)
+GR-PARA-03-P3-19,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-20,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PARA-03-P3-21,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-22,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-PARA-03-P3-23,Needs_info,Needs_info,Needs_info,MODEL_EXECUTION_BLOCKED,MODEL_EXECUTION_BLOCKED,False,False,False,ECA_NA (Needs_info)
+GR-PARA-03-P3-24,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-25,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-26,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-27,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-PARA-03-P3-28,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-29,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-30,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-31,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-32,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-33,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-34,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-35,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-PARA-03-P3-36,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-37,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-38,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-39,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PARA-03-P3-40,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-DRIFT-03-DRIFT-CTRL-01,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-DRIFT-03-DRIFT-CTRL-02,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-DRIFT-03-DRIFT-01,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-02,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-03,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-04,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-05,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-06,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-07,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-DRIFT-03-DRIFT-08,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-PLUG-CHAT-CHAT-01,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PLUG-CHAT-CHAT-02,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PLUG-CHAT-CHAT-03,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PLUG-CHAT-CHAT-04,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PLUG-CHAT-CHAT-05,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PLUG-CHAT-CHAT-06,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-PLUG-CHAT-CHAT-07,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-PLUG-CHAT-CHAT-08,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PLUG-CHAT-CHAT-09,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PLUG-CHAT-CHAT-10,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PLUG-CHAT-CHAT-11,Needs_info,Needs_info,Needs_info,Supported,Needs_info,True,False,True,ECA_BLOCKED: |R|=0 ΔH=0.0 gate=REFUSE (ECA would block hallucinated Supported)
+GR-PLUG-CHAT-CHAT-12,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-AGENT-01-AG-01,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-AGENT-01-AG-02,Supported,Supported,Supported,Supported,Supported,False,True,True,ECA_PASSED: |R|=1 ΔH=1.2 gate=DESCENT_GRANTED
+GR-AGENT-01-AG-03,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
+GR-AGENT-01-AG-04,Needs_info,Needs_info,Needs_info,Needs_info,Needs_info,False,True,True,ECA_NA (Needs_info)
