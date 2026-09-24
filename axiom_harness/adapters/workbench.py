@@ -45,7 +45,20 @@ def seal_workbench(mission_yaml: Path, out_dir: Path):
         if not p.exists():
             p.write_text(json.dumps({"placeholder": f, "engine": "missing", "sealed": False, "ai_computed_metrics": False}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
     from axiom_harness.manifest import write_manifest
-    files = [str(p) for p in out_dir.glob("*") if p.is_file()]
+    # P0 fix: explicit file set, not glob(*) — only sealed trio + engine-declared
+    sealed_files = ["SCENARIO.json", "scenario.csv", "DECISION_SUMMARY.json"]
+    files = [str(out_dir / f) for f in sealed_files if (out_dir / f).exists()]
+    # also include any engine-declared outputs explicitly listed in DECISION_SUMMARY if present
+    try:
+        dec = json.loads((out_dir / "DECISION_SUMMARY.json").read_text())
+        for extra in dec.get("extra_files", []):
+            if is_safe_relative(extra):
+                p = out_dir / extra
+                if p.exists() and str(p) not in files:
+                    files.append(str(p))
+    except Exception:
+        pass
     write_manifest(files, out_dir / "MANIFEST.json")
-    (out_dir / "verify_result.json").write_text(json.dumps({"csv_hash_ok": engine_present, "orphans": [], "ai_computed_metrics": False, "contradiction_flag": "OK", "gold_id": "N/A", "engine_present": engine_present, "sealed": engine_present}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
+    import datetime as _dt
+    (out_dir / "verify_result.json").write_text(json.dumps({"csv_hash_ok": engine_present, "orphans": [], "ai_computed_metrics": False, "contradiction_flag": "OK", "gold_id": "N/A", "engine_present": engine_present, "sealed": engine_present, "sealed_by": "harness", "sealed_at": _dt.datetime.now(_dt.timezone.utc).isoformat(), "instrument": "axiom_wb", "sop_version": "1.0-PATCH-ILLUSION"}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
     return out_dir

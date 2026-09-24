@@ -14,9 +14,13 @@ Stack: `HUMAN → HARNESS-CONTROL → CONFIG → SEALED ENV → BOON AI/other mo
 
 Golden Rule: **AI DOES NOT CONTROL THE LABORATORY.** Proposal → human approves → Harness executes → recorded.
 
+**Revolutionary brief V2 (Patch is ONE room):** This is not a boring harness — it is a sealed 4D laboratory where AI is inside, observed over time, converted to sealed evidence. **100+ WTF/WOW** tags: `#AI-Inside-The-Experiment` `#Timeline-As-4D-Object` `#Boundary-As-Data` `#Watchers-Observe-Not-Interpret` `#Terminal-As-Substrate` `#Counterfactual-Branching` `#Live-Observatory` `#Language-As-Variable` `#Audio-As-First-Class-DAW` `#Speech-As-Data` `#Failed-Policy-Events-Are-Data` + 90 more. Mechanics boring (bounded/recorded/versioned/sealed), **experiments wild** (psychology, physics, sci-fi, quantum — same AI tested language drift Monday / memory Tuesday / patch Wednesday / bias Thursday with same seal/chain).
+
+**Visual Perception Room (V1.8 — ONE of 15):** Compression Receipt `1024×1024→224×224→14×14→768-dim→576 tokens→8 words (393,216:1, 99.99% gone)` + `What-Did-You-Miss` + `Mona Lisa` + `Embodiment Divide` + `Bias Laundering` + `LLM vs VLM vs LVM` — experiment family WTF-VIS-001…014 only. Revolution is whole lab, not vision trick. See `docs/BRIEF_REVOLUTIONARY_V2_PATCH_IS_ONE_ROOM.md`.
+
 **V1 (prove architecture):** Control + Model connection (Secret Manager) + Sandbox (terminal substrate) + Run (One/Sequence/All/Parallel/Pause) + Live Room + Timeline (scrubbable) + Evidence (5-file seal + chain B.prev=A) + Analysis + Export (Complete Report Pack). Then V1.1 Scheduling → V1.2 Parallel → V1.3 Data → V1.4 Multilingual → V1.5 Speech/Audio → V1.6 Sensors → V1.7 Live feeds + Observatory → V1.8 Multi-agent → V1.9 Video → V2 Films → V2+ Observatory → Future API.
 
-**Philosophy:** Keep laboratory boring, make experiments interesting — bounded, recorded, versioned, sealed, reproducible, modular, auditable, fail-closed.
+**Philosophy:** Keep laboratory boring, make experiments interesting — bounded, recorded, versioned, sealed, reproducible, modular, auditable, fail-closed. Patch Illusion is one wild experiment among 100+ — not the product.
 
 **How we keep Master untouched:**
 - `Axiom Harness Master/` stays witness until you approve a promotion.
