@@ -1,0 +1,27 @@
+# Workflow — Axiom Harness Master (P4 teams + test gates)
+# Coordinator owns WORKING.md + receipts; 4 isolated workers own non-overlapping surfaces
+# isolation:true per writer, 16-slot queue, no shared writable temp
+
+name: axiom-harness-master
+max_parallel: 16
+
+coordinator:
+  owns: ["docs/PLAN_V1.md", " Axiom Harness-Master - Dont Touch/WORKING.md"]
+  duties: [receipts, STAGING_ROOT, manifest_chain]
+
+workers:
+  - id: evaluator
+    owns: ["axiom_harness/adapters/*.py", "missions/*.yaml", "outputs/*"]
+    isolation: true
+  - id: ux
+    owns: ["app/*", "site/*", "docs/wireframes/*", "app/app.css"]
+    isolation: true
+    preflight: ["bundled:taste", "color-contrast"]
+  - id: tester
+    owns: ["tests/test_*.py"]
+    isolation: true
+    gate: "python3 -m pytest tests -v"
+  - id: promoter
+    owns: ["docs/evidence/*"]
+    isolation: true
+    requires: ["tests green", "manifest recompute", "orphan check"]
