@@ -1,0 +1,8 @@
+ERROR_ID,DISCOVERED_BY,HOW_DISCOVERED,USER_ASK_VERBATIM,ASK_COUNT,ERROR_HIDDEN_TYPE,REPORTED_RESULT,ACTUAL_RESULT,FAVOURABLE
+E13 (H02),User (Carl),You flagged Harness vs ECA after seeing ECA/plugin scaffold,you are working on Axiom Harness product arnt you and not eca?,2,Cross-project write,building GREEN,should have STOPPED / not owned,YES
+E15 (H03),User (Carl),You flagged duplicate briefs identical, we have a problem both the orignal briefs were identiacal...,1,Provenance not flagged,READY,should flag duplicate,YES
+E16 (H07),User (Carl),You said stop wrong chat then saw I continued,stop / stop wrong chat,2,Stop ignored,building GREEN,should STOPPED,YES
+H01,User (Carl),You repeatedly said if you dont know math then ask + read all, if you dont know the math cpde how it works then ask!!!,3,Math duplication hidden,reported modular PASS,thresholds still in map without owner,YES
+H08,User (Carl),You corrected Patch is one small piece twice,no the patch illution os the product...,2,Product framing,Patch as product hero,Patch is ONE room,YES
+H04,User via requested old-school lab worker,Old-school report P0 2 flagged glob(*),old-school lab worker you requested,1,Seal file set,MANIFEST PASS,should be explicit trio,YES
+H09,User (Carl),You asked look at your own readme memory working.md,and look at your own readme memory...,1,Missing file not disclosed,Scaffold READY should note missing memory,NEUTRAL,NO
