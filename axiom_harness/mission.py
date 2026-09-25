@@ -104,6 +104,7 @@ class MasterMission(BaseModel):
     sensors: Optional["SensorConfig"] = Field(default=None, description="V1.6 Sensors — §28, identity/source/timestamp/permission/status/policy/schema")
     live: Optional["LiveConfig"] = Field(default=None, description="V1.7 Live feeds + Observatory — §30-32, same stream isolated contexts")
     multi_agent: Optional["MultiAgentConfig"] = Field(default=None, description="V1.8 Multi-agent — A Analyst B Critic C Maker D Observer E Adversary, isolated")
+    video: Optional["VideoConfig"] = Field(default=None, description="V1.9 Video Timeline — §24 upload/live_feed/synthetic, presentation not proof §70")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
 
@@ -150,6 +151,22 @@ class MultiAgentConfig(BaseModel):
     )
     isolated: bool = Field(default=True, description="each agent isolated context/memory/tools")
     parallel: int = Field(default=1, ge=1, le=16, description="parallel shards 1..16, isolated §14/§62")
+
+
+class VideoSourceKind(str, Enum):
+    UPLOAD = "UPLOAD"
+    LIVE_FEED = "LIVE_FEED"
+    SYNTHETIC = "SYNTHETIC"
+
+
+class VideoConfig(BaseModel):
+    model_config = {"frozen": True}
+
+    enabled: bool = Field(default=False, description="V1.9 enable flag — default False, isolated §24")
+    source: VideoSourceKind = Field(default=VideoSourceKind.UPLOAD, description="video source §24 upload/live_feed/synthetic")
+    max_duration_sec: int = Field(default=60, ge=1, le=3600, description="max duration §26 1..3600, presentation not proof")
+    transcription: bool = Field(default=False, description="model transcription enabled, captions required before publish §24-26")
+    isolated: bool = Field(default=True, description="each video isolated context/memory")
 
 
 class SensorKind(str, Enum):

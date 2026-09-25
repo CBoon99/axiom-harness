@@ -1,0 +1,48 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video Timeline — Staging</title>
+<link rel="stylesheet" href="app.css">
+<div class="wrap">
+<nav style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+<a href="index.html">Control</a> <a href="../docs/wireframes/environment.html">Environment</a> <a href="../docs/wireframes/timeline.html">Timeline</a> <a href="../docs/wireframes/live.html">Live</a> <a href="../docs/wireframes/evidence.html">Evidence</a> <a href="multi_agent.html">Multi-agent</a> <a href="video.html" style="font-weight:700">Video</a>
+</nav>
+<div class="card">
+<h2 style="margin:0 0 8px">Video Timeline — §24 upload / live_feed / synthetic — presentation not proof §70</h2>
+<p class="muted">V1.9 bolt-on — each video isolated context/memory. Captions/transcript required before publish if transcription=true per <code>captions-media-accessibility SC 1.2.2</code> + <code>audio-video</code> mandate: no publish without human-reviewed captions + transcript + audio description where required.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+<label>Source: <select id="src" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px"><option>UPLOAD</option><option>LIVE_FEED</option><option>SYNTHETIC</option></select></label>
+<label>Max duration (s): <input id="dur" type="number" value="60" min="1" max="3600" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;width:90px"></label>
+<label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="trans"> Transcription (captions + transcript)</label>
+<span class="tag">Isolated</span>
+</div>
+<div style="display:flex;gap:8px;margin-top:12px">
+<button class="btn" id="sealVideo">Seal Video Config</button><button class="btn ghost" id="playBtn">Play</button><button class="btn ghost" id="pauseBtn">Pause</button>
+</div>
+<div style="margin-top:10px" class="kv">Sealed: <code id="hash">sha256: —</code> · <span id="durRead">Duration 60s</span> · <span id="transRead">Transcription OFF — captions not required (no publish gate)</span></div>
+</div>
+<div class="card" style="margin-top:12px">
+<h3 style="margin:0 0 6px">Preview — no autoplay, captions + transcript linked</h3>
+<video id="vid" controls preload="metadata" playsinline poster="" style="width:100%;max-height:320px;background:#000;border-radius:8px">
+<source src="" type="video/mp4">
+<track kind="captions" src="video.en.vtt" srclang="en" label="English captions" default>
+<track kind="descriptions" src="video.descriptions.en.vtt" srclang="en" label="English descriptions">
+<p>Your browser cannot play this video. <a href="">Download the video</a>.</p>
+</video>
+<div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+<a href="#transcript-video" id="transcriptLink">Read the Video transcript (HTML, anchor #transcript-video)</a> · <a href="video.en.vtt">Captions .vtt</a> · <a href="video.descriptions.en.vtt">Descriptions</a>
+</div>
+<details id="transcript-video" style="margin-top:8px;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fff"><summary>Descriptive transcript (time ≈ preview)</summary>
+<p><strong>Video descriptive transcript</strong> — essential visual info already spoken in narration where possible (integrated description). No flash >3Hz per WCAG 2.3.1.</p>
+<p>[00:00] Presenter: "In the left sidebar, open Filters, then choose Last quarter from the Date range menu." [cursor moves to Filters → Date range → Last quarter]</p>
+<p>[00:12] [soft piano music] Chart updates — bar for Q4 highlights.</p>
+<p>Download: <a href="video.en.vtt">video.en.vtt</a> (WebVTT, UTF-8, WEBVTT header, HH:MM:SS.mmm)</p>
+</details>
+<div class="muted" style="margin-top:6px">Poster fallback · reduced-motion: video paused if <code>prefers-reduced-motion: reduce</code> · captions/transcript human-reviewed before publish.</div>
+</div>
+</div>
+<script>
+const src=document.getElementById('src'), dur=document.getElementById('dur'), trans=document.getElementById('trans'), hash=document.getElementById('hash'), durRead=document.getElementById('durRead'), transRead=document.getElementById('transRead');
+function upd(){ hash.textContent='sha256:'+btoa(src.value+dur.value+trans.checked).slice(0,8); durRead.textContent='Duration '+dur.value+'s'; transRead.textContent=trans.checked?'Transcription ON — captions + transcript required before publish (SC 1.2.2/1.2.5)':'Transcription OFF — captions not required (no publish gate)'; }
+src.onchange=upd; dur.oninput=upd; trans.onchange=upd; upd();
+document.getElementById('sealVideo').onclick=()=>alert('Seal → POST /master/video 201 '+hash.textContent);
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.getElementById('vid').pause();
+</script>

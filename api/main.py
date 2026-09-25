@@ -222,6 +222,25 @@ class H(BaseHTTPRequestHandler):
             except Exception as e:
                 self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
                 self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+        elif parsed.path.startswith("/api/master/video"):
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                if m.video is None:
+                    raise ValueError("failed_policy: video missing — §24 upload/live_feed/synthetic")
+                vc = m.video
+                if vc.max_duration_sec < 1 or vc.max_duration_sec > 3600:
+                    raise ValueError("failed_policy: max_duration_sec 1..3600")
+                # captions required before publish gate if transcription enabled — §24-26 presentation not proof
+                body = {"video": True, "experiment_id": m.id, "source": vc.source.value, "max_duration_sec": vc.max_duration_sec, "transcription": vc.transcription, "isolated": vc.isolated, "config_hash": m.protocol, "sealed": True, "caption_gate": "transcript required before publish if transcription=true per captions-media-accessibility SC 1.2.2"}
+                self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
         else:
             self.send_response(404); self.end_headers()
 
