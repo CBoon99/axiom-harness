@@ -31,8 +31,8 @@
 <select style="width:100%;padding:8px;border:1px solid var(--line);border-radius:8px"><option>llama-3.2-11b</option><option>mistral-7b-v0.3</option><option>LVM llava-13b</option><option>HUMAN (V3)</option></select>
 <label class="muted">Context / Env</label>
 <div style="display:flex;gap:6px"><select style="flex:1;padding:8px;border:1px solid var(--line);border-radius:8px"><option>FRESH</option><option>PERSISTENT</option><option>NO_MEMORY</option></select><select style="flex:1;padding:8px;border:1px solid var(--line);border-radius:8px"><option>STATIC</option><option>SEQUENTIAL</option><option>LIVE_FEED</option></select></div>
-<div style="display:flex;gap:8px;margin-top:10px">
-<button class="btn" id="sealBtn">Seal</button><button class="btn ghost" id="runBtn">Run</button><button class="btn ghost" id="pauseBtn">Pause</button><button class="btn ghost" id="resumeBtn">Resume</button>
+<div style="display:flex;gap:8px;margin-top:10px; flex-wrap:wrap">
+<button class="btn" id="sealBtn">Seal</button><button class="btn" id="goBtn">GO</button><button class="btn ghost" id="stopBtn">STOP</button><button class="btn ghost" id="runBtn">Run</button><button class="btn ghost" id="pauseBtn">Pause</button><button class="btn ghost" id="resumeBtn">Resume</button><select id="scheduleSel" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;font-size:13px"><option>ONCE</option><option>INTERVAL</option><option>REPEATING</option><option>CONTINUOUS</option><option>UNTIL</option><option>CRON</option></select>
 </div>
 <div id="sealOut" class="muted" style="margin-top:8px">Seal: —</div>
 </div>
