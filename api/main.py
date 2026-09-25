@@ -241,6 +241,24 @@ class H(BaseHTTPRequestHandler):
             except Exception as e:
                 self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
                 self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+        elif parsed.path.startswith("/api/master/films"):
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                if m.films is None:
+                    raise ValueError("failed_policy: films missing — §25/27 Experiment→Story")
+                fc = m.films
+                if fc.template not in ["chronological","comparative","ghost"]:
+                    raise ValueError("failed_policy: template must be chronological|comparative|ghost")
+                body = {"films": True, "experiment_id": m.id, "template": fc.template, "auto_chapters": fc.auto_chapters, "isolated": fc.isolated, "config_hash": m.protocol, "sealed": True}
+                self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
         else:
             self.send_response(404); self.end_headers()
 

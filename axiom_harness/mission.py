@@ -105,6 +105,7 @@ class MasterMission(BaseModel):
     live: Optional["LiveConfig"] = Field(default=None, description="V1.7 Live feeds + Observatory — §30-32, same stream isolated contexts")
     multi_agent: Optional["MultiAgentConfig"] = Field(default=None, description="V1.8 Multi-agent — A Analyst B Critic C Maker D Observer E Adversary, isolated")
     video: Optional["VideoConfig"] = Field(default=None, description="V1.9 Video Timeline — §24 upload/live_feed/synthetic, presentation not proof §70")
+    films: Optional["FilmsConfig"] = Field(default=None, description="V2 Films — Experiment→Story §25/27, isolated render")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
 
@@ -167,6 +168,15 @@ class VideoConfig(BaseModel):
     max_duration_sec: int = Field(default=60, ge=1, le=3600, description="max duration §26 1..3600, presentation not proof")
     transcription: bool = Field(default=False, description="model transcription enabled, captions required before publish §24-26")
     isolated: bool = Field(default=True, description="each video isolated context/memory")
+
+
+class FilmsConfig(BaseModel):
+    model_config = {"frozen": True}
+
+    enabled: bool = Field(default=False, description="V2 Films enable — Experiment→Story §25/27, isolated")
+    template: Literal["chronological", "comparative", "ghost"] = Field(default="chronological", description="story template §25")
+    auto_chapters: bool = Field(default=True, description="auto chapters from timeline events §25")
+    isolated: bool = Field(default=True, description="each film isolated render context")
 
 
 class SensorKind(str, Enum):
