@@ -1,0 +1,5 @@
+# RECEIPT INDEX — 2026-09-26
+| RECEIPT_ID | RUN_ID | TEST_ID | PACK_ID | DATE | INPUT_HASH | OUTPUT_HASH | METHOD_VERSION | STATUS | PATH |
+|---|---|---|---|---|---|---|---|---|---|
+| RECEIPT-SMOKE-001 | RUN-SMOKE-001 | TEST-HARNESS-BOUNDARY-001 | PACK-EXPORT-001 | 2026-09-26 | WTF-005A-HASH-v3 | sha256:smoke | f024fee | PASSED | outputs/smoke_001/manifest-sha256.txt |
+| RECEIPT-EXPORT-001 | RUN-EXPORT-001 | TEST-EXPORT-001 | PACK-EXPORT-001 | 2026-09-26 | proto-export | sha256:zip | 5f99870 | PASSED | outputs/EXPORT-001/deliverable.zip |

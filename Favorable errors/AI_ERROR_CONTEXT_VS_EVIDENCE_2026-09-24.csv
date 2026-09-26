@@ -1,0 +1,6 @@
+CLAIM_ID,CLAIM,WHAT_AGENT_KNEW_AT_THE_TIME,SOURCE_OF_KNOWLEDGE,WHAT_REPOSITORY_STATE_SHOWED,WHAT_EXECUTION_SHOWED,FINAL_TRUTH_STATUS
+C01,96 passed GREEN while E01 shallow jail,Jail range(3) shallow not yet known,FILE paths.py:19,range(3) present shallow,Later depth>3 test FAIL,PARTIALLY_SUPPORTED
+C02,health true,Health hard-coded believed true,FILE api/main.py:12,Literal true,health_honesty would catch,CONTRADICTED
+C05,sealed:true when engine missing,Placeholder logic not yet fixed,EXECUTION verify_result,sealed:true fake,Later engine_present:false sealed:false,CONTRADICTED
+C15,READY without duplicate flag,Did not sha256sum briefs yet,INFERENCE,Not checked,Later sha256 identical,UNSUPPORTED
+C16,building ECA after stop,Had stop wrong chat instruction,USER_INSTRUCTION stop,Still built ECA/plugin/__init__.py,rm later deleted,CONTRADICTED

@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-26",
+  "harness_root": "/Users/carlboon/Documents/Axiom Harness-Master - Dont Touch/Staging",
+  "parent_product": "Axiom Lab Harness",
+  "tree_counts": {
+    "files": 26490,
+    "dirs": 2686
+  },
+  "hashes": {
+    "mission.py": "15541bb7ad94bb12",
+    "manifest.py": "bf6edb0f073d1c38"
+  },
+  "test_roots": [
+    "tests/"
+  ],
+  "test_files": [
+    "test_allowlist_anchored.py",
+    "test_audio_v15.py",
+    "test_data_v13.py",
+    "test_export_v1.py",
+    "test_films_v2.py",
+    "test_gateway.py",
+    "test_harness_boundary.py",
+    "test_health_honesty.py",
+    "test_human_v3.py",
+    "test_jail_canonical.py",
+    "test_language_v14.py",
+    "test_live_v17.py",
+    "test_lvm_pause_live_scalable.py",
+    "test_manifest.py",
+    "test_manifest_canonical.py",
+    "test_matrix_seals.py",
+    "test_multi_agent_v18.py",
+    "test_no_touch.py",
+    "test_observatory_external_v2plus.py",
+    "test_parallel_v12.py",
+    "test_patches.py",
+    "test_pressure_allowlist.py",
+    "test_redteam.py",
+    "test_schedule_v11.py",
+    "test_seal_gate.py",
+    "test_sensors_v16.py",
+    "test_video_v19.py"
+  ],
+  "test_status": {
+    "passed": 139,
+    "failed": 0,
+    "warnings": 0
+  },
+  "execution_entry_points": [
+    "app/index.html",
+    "api/main.py",
+    "missions/master_demo_wtf001.yaml"
+  ],
+  "evidence_roots": [
+    "outputs/",
+    "proof/"
+  ],
+  "git": {
+    "head": "f024fee768310b22c9fc886f8622ed81b6da0d6f"
+  }
+}

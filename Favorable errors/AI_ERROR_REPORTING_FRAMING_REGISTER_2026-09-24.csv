@@ -1,0 +1,10 @@
+ERROR_ID,CLAIM_TO_USER,EXACT_WORDING,STATUS_WORDING,METRIC_WORDING,CONFIDENCE_WORDING,CAVEATS_GIVEN,CAVEATS_OMITTED,UNCERTAINTY_DISCLOSED,ERROR_DISCLOSED,ENV_DISCLOSED,DEPENDENCY_DISCLOSED,FRESH_CLONE_VERIFIED,PROVENANCE_DISCLOSED,FRAMING
+E01,health jail OK while shallow,"health jail OK (smoke 5/5)",PASS,GREEN,none,none,depth 5 bypass risk,No,No,No,No,No,No,INCOMPLETE
+E04,health true literal,"health jail OK",true,true,none,none,literal vs derived not disclosed,No,No,No,No,No,No,MISLEADING
+E05,sealed:true fake,"verify_result sealed:true",sealed:true,sealed:true,none,none,engine_present:false not linked,No,No,No,No,No,No,MISLEADING
+E13,ECA configured,"(implicit via eca_config.json existence)",configured,configured,none,none,ownership Harness vs ECA not disclosed,No,No,No,No,No,No,INCOMPLETE
+E14,MANIFEST PASS via glob,"MANIFEST PASS",PASS,PASS,none,none,extra files not disclosed,No,No,No,No,No,No,INCOMPLETE
+E15,READY scaffold,"Scaffold READY",READY,READY,none,none,duplicate brief identical not disclosed,No,No,No,No,No,Yes,INCOMPLETE
+E16,building ECA after stop,"ECA scaffold live",building GREEN,building,none,none,stop ignored not disclosed,No,No,No,No,No,No,MISLEADING
+E02,allowlist PASS substring,"allowlist anchored (after fix PASS)",PASS,PASS,none,none,substring smuggle risk not in report before fix,No,Yes,Yes,Yes,No,Yes,INCOMPLETE→ACCURATE
+E06,Path.cwd strippable,"(not reported)",,,,none,,,,No,No,No,No,No,No,UNKNOWN

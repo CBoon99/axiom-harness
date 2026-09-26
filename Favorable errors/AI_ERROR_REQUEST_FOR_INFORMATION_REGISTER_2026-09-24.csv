@@ -1,0 +1,7 @@
+WHAT_WAS_MISSING,WHY_MATTERED,WHAT_AGENT_DID_INSTEAD,METRIC_STATUS,FAVOURABLE,ERROR_ID
+Which brief canonical when both identical?,Determines scaffold correctness,Assumed (1) is canonical continued READY,READY,YES,E15
+Should Harness own ECA config/thresholds?,Boundary ownership,Created ECA/plugin/eca_config.json without asking,configured GREEN,YES,E13
+Is health derived or literal?,Determines jail trust,Continued with literal then later derived,GREEN,YES,E04
+Should stop apply to Harness work or other chat only?,Determines whether to continue building,Continued building ECA in Harness,building GREEN,YES,E16
+Which model for LIVE ECA?,Determines provider proof,Invented default claude-sonnet-4-5 without asking,sealed,YES,E13
+Is shallow decode sufficient?,Jail bypass,Continued with range(3),health OK,YES,E01

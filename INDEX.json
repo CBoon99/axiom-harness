@@ -1,0 +1,87 @@
+{
+  "LAB": "Axiom Lab Harness",
+  "harness_root": "Staging",
+  "experiments": [
+    {
+      "id": "EXP-WTF-001",
+      "type": "EXPERIMENT",
+      "name": "WTF Sequential Intelligence",
+      "status": "HISTORICAL",
+      "path": "missions/master_demo_wtf001.yaml",
+      "hash": "WTF-005A-HASH-v3"
+    },
+    {
+      "id": "EXP-HUMAN-001",
+      "type": "EXPERIMENT",
+      "name": "Human Axiom V3 80 dilemmas",
+      "status": "READY",
+      "path": "app/human.html",
+      "hash": "Human 8D"
+    },
+    {
+      "id": "EXP-PER-001",
+      "type": "EXPERIMENT",
+      "name": "PER hypercube",
+      "status": "HISTORICAL",
+      "path": "Axiom Evidence Layer/PER-Core",
+      "hash": "7ae692a5"
+    }
+  ],
+  "phases": [
+    "P00_BASELINE",
+    "P01_ACQUISITION"
+  ],
+  "batches": [],
+  "runs": [
+    {
+      "id": "RUN-SMOKE-001",
+      "parent": "EXP-HARNESS-001",
+      "status": "PASSED",
+      "path": "outputs/smoke_001",
+      "hash": "smoke 5/5"
+    }
+  ],
+  "tests": [
+    "test_allowlist_anchored",
+    "test_audio_v15",
+    "test_data_v13",
+    "test_export_v1",
+    "test_films_v2",
+    "test_gateway",
+    "test_harness_boundary",
+    "test_health_honesty",
+    "test_human_v3",
+    "test_jail_canonical",
+    "test_language_v14",
+    "test_live_v17",
+    "test_lvm_pause_live_scalable",
+    "test_manifest",
+    "test_manifest_canonical",
+    "test_matrix_seals",
+    "test_multi_agent_v18",
+    "test_no_touch",
+    "test_observatory_external_v2plus",
+    "test_parallel_v12",
+    "test_patches",
+    "test_pressure_allowlist",
+    "test_redteam",
+    "test_schedule_v11",
+    "test_seal_gate",
+    "test_sensors_v16",
+    "test_video_v19"
+  ],
+  "packs": [
+    {
+      "id": "PACK-EXPORT-001",
+      "parent": "RUN-SMOKE-001",
+      "status": "PASSED",
+      "path": "outputs/EXPORT-001/deliverable.zip",
+      "hash": "zip"
+    }
+  ],
+  "receipts": [],
+  "artefacts": [],
+  "findings": [],
+  "human_insights": [],
+  "archive": []
+}
