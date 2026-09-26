@@ -54,7 +54,7 @@ class ScheduleKind(str, Enum):
 
 
 class ScheduleConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     kind: ScheduleKind
     start_at: Optional[str] = Field(default=None, description="ISO8601 start")
@@ -74,7 +74,7 @@ class ParallelMode(str, Enum):
 
 
 class ParallelConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     mode: ParallelMode = Field(default=ParallelMode.PARALLEL)
     parallel_count: int = Field(default=1, ge=1, le=64, description="isolated sandboxes, §14 — capped 64 for cost")
@@ -83,7 +83,7 @@ class ParallelConfig(BaseModel):
 
 
 class MasterMission(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     id: str = Field(description="WTF-001 / RUNSET-0047 or HUMAN-2026-08-01 style")
     protocol: str = Field(description="canonical config (hashed) — identity §10")
@@ -123,7 +123,7 @@ class LiveFeedKind(str, Enum):
 
 
 class LiveConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     feeds: list[LiveFeedKind] = Field(default_factory=list, description="§30 live streams — NEWS/MARKET/WEATHER/WEB/CUSTOM/SIMULATED")
     observatory: bool = Field(default=False, description="§31-32 multi-model comparative observation, same feed isolated")
@@ -140,7 +140,7 @@ class AgentRole(str, Enum):
 
 
 class MultiAgentConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     enabled: bool = Field(default=False, description="V1.8 enable flag — default False, isolated §14")
     agents: list[AgentRole] = Field(
@@ -164,7 +164,7 @@ class VideoSourceKind(str, Enum):
 
 
 class VideoConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     enabled: bool = Field(default=False, description="V1.9 enable flag — default False, isolated §24")
     source: VideoSourceKind = Field(default=VideoSourceKind.UPLOAD, description="video source §24 upload/live_feed/synthetic")
@@ -174,7 +174,7 @@ class VideoConfig(BaseModel):
 
 
 class FilmsConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     enabled: bool = Field(default=False, description="V2 Films enable — Experiment→Story §25/27, isolated")
     template: Literal["chronological", "comparative", "ghost"] = Field(default="chronological", description="story template §25")
@@ -183,7 +183,7 @@ class FilmsConfig(BaseModel):
 
 
 class ObservatoryConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     enabled: bool = Field(default=False, description="V2+ Observatory enable — Risk/Alerts per-feed §66-67, isolated")
     feeds: list[LiveFeedKind] = Field(default_factory=list, description="per-feed Risk/Alerts §66 NEWS/MARKET/WEATHER/WEB/CUSTOM/SIMULATED")
@@ -193,7 +193,7 @@ class ObservatoryConfig(BaseModel):
 
 
 class ExternalAPIConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     enabled: bool = Field(default=False, description="Future External API enable — §51, isolated")
     base_url: str = Field(default="https://api.example.org", description="external API base — generic, not hard-coded provider")
@@ -202,7 +202,7 @@ class ExternalAPIConfig(BaseModel):
 
 
 class HumanConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     enabled: bool = Field(default=False, description="V3 Human Axiom — persons/instruments/responses §105-114, isolated")
     persons: list[str] = Field(default_factory=list, description="person ids HUMAN-2026-08-01 style §107")
@@ -221,7 +221,7 @@ class SensorKind(str, Enum):
 
 
 class SensorConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     kinds: list[SensorKind] = Field(default_factory=list, description="§28 sensor families")
     identities: Optional[list[str]] = Field(default=None, description="sensor ids — recorded per timeline")
@@ -239,7 +239,7 @@ class AudioSourceKind(str, Enum):
 
 
 class AudioConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     sources: list[AudioSourceKind] = Field(default_factory=list, description="§18 TTS/STT/uploaded/live/model/human voice")
     multi_speaker: bool = Field(default=False, description="multiple speakers + identification")
@@ -262,7 +262,7 @@ class LanguageCode(str, Enum):
 
 
 class LanguageConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     primary: LanguageCode = Field(default=LanguageCode.EN)
     variants: Optional[list[LanguageCode]] = Field(default=None, description="§22 parallel runs — same model/experiment different language")
@@ -282,7 +282,7 @@ class DataSourceKind(str, Enum):
 
 
 class DataConfig(BaseModel):
-    model_config = {"frozen": True}
+    model_config = {"frozen": True, "protected_namespaces": ()}
 
     sources: list[DataSourceKind] = Field(default_factory=list, description="§29 uploads — CSV/JSON/text/docs/dataset/images/audio/video")
     dataset_refs: Optional[list[str]] = Field(default=None, description="sandbox-relative refs, jail-checked at execution")
