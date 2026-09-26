@@ -259,6 +259,24 @@ class H(BaseHTTPRequestHandler):
             except Exception as e:
                 self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
                 self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+        elif parsed.path.startswith("/api/master/human"):
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                if m.human is None:
+                    raise ValueError("failed_policy: human missing — V3 persons/instruments/responses §105-114")
+                hc = m.human
+                if not hc.persons:
+                    raise ValueError("failed_policy: persons empty — requires HUMAN-2026-08-01 style id")
+                body = {"human": True, "experiment_id": m.id, "persons": hc.persons, "instrument": hc.instrument, "trail_path": hc.trail_path, "isolated": hc.isolated, "config_hash": m.protocol, "sealed": True}
+                self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
         elif parsed.path.startswith("/api/master/external-api"):
             length = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(length) if length else b'{}'

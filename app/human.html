@@ -1,0 +1,29 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Human Axiom — Persons</title>
+<link rel="stylesheet" href="app.css">
+<div class="wrap">
+<nav style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+<a href="index.html">Control</a> <a href="observatory.html">Observatory</a> <a href="external_api.html">External API</a> <a href="human.html" style="font-weight:700">Human Axiom</a>
+</nav>
+<div class="card">
+<h2 style="margin:0 0 8px">Human Axiom — persons / instruments / responses §105-114</h2>
+<p class="muted">V3 bolt-on — 80 human dilemmas, 8 dims (persons → instruments → responses → assessments `RESULT+EVIDENCE+METHOD...`). Each trail `GET /human/{id}/trail` isolated, `B.prev=A` chain same as evidences.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+<label>Persons (comma): <input id="persons" value="HUMAN-2026-08-01, HUMAN-2026-08-02" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;width:280px"></label>
+<label>Instrument: <input id="inst" value="Human 8D — 80 dilemmas" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;width:200px"></label>
+<label>Trail: <input id="trail" value="/human/{id}/trail" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;width:160px"></label>
+</div>
+<div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="sealHuman">Seal Human Config</button><button class="btn ghost">Read trail</button></div>
+<div style="margin-top:10px" class="kv">Sealed: <code id="hash">sha256: —</code> · <span id="read">2 persons</span></div>
+</div>
+<div class="card" style="margin-top:12px">
+<h3 style="margin:0 0 6px">Trail preview — verify.html pattern §112</h3>
+<pre id="trailView" style="background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px;font-size:12px">GET /human/HUMAN-2026-08-01/trail → { persons, instruments, responses, evidences chain }</pre>
+</div>
+</div>
+<script>
+const p=document.getElementById('persons'), i=document.getElementById('inst'), t=document.getElementById('trail'), h=document.getElementById('hash'), r=document.getElementById('read'), v=document.getElementById('trailView');
+function upd(){ const c=p.value.split(',').filter(s=>s.trim()).length; h.textContent='sha256:'+btoa(p.value+i.value).slice(0,8); r.textContent=c+' persons'; v.textContent='GET '+t.value.replace('{id}', p.value.split(',')[0].trim()||'HUMAN-2026-08-01')+' → trail (isolated)'; }
+p.oninput=upd; i.oninput=upd; t.oninput=upd; upd();
+document.getElementById('sealHuman').onclick=()=>alert('Seal → POST /master/human 201 '+h.textContent);
+</script>

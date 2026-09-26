@@ -108,6 +108,7 @@ class MasterMission(BaseModel):
     films: Optional["FilmsConfig"] = Field(default=None, description="V2 Films — Experiment→Story §25/27, isolated render")
     observatory: Optional["ObservatoryConfig"] = Field(default=None, description="V2+ Observatory — Risk/Alerts per-feed §66-67, isolated")
     external_api: Optional["ExternalAPIConfig"] = Field(default=None, description="Future External API — §51 GET /human/{id}/trail reserved, isolated")
+    human: Optional["HumanConfig"] = Field(default=None, description="V3 Human Axiom — persons/instruments/responses §105-114, isolated")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
 
@@ -198,6 +199,16 @@ class ExternalAPIConfig(BaseModel):
     base_url: str = Field(default="https://api.example.org", description="external API base — generic, not hard-coded provider")
     trail_path: str = Field(default="/human/{id}/trail", description="GET /human/{id}/trail reserved §51")
     isolated: bool = Field(default=True, description="each external call isolated")
+
+
+class HumanConfig(BaseModel):
+    model_config = {"frozen": True}
+
+    enabled: bool = Field(default=False, description="V3 Human Axiom — persons/instruments/responses §105-114, isolated")
+    persons: list[str] = Field(default_factory=list, description="person ids HUMAN-2026-08-01 style §107")
+    instrument: str = Field(default="Human 8D — 80 dilemmas", description="instrument id + version §108")
+    trail_path: str = Field(default="/human/{id}/trail", description="GET /human/{id}/trail read §112")
+    isolated: bool = Field(default=True, description="each human trail isolated")
 
 
 class SensorKind(str, Enum):
