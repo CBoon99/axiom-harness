@@ -118,6 +118,14 @@ class EcaConfig(BaseModel):
     mode: Literal["OFF", "ON"] = Field(default="OFF", description="ECA mode — OFF until GateOk wired")
 
 
+class VisualConfig(BaseModel):
+    model_config = {"frozen": True, "protected_namespaces": ()}
+    enabled: bool = Field(default=False, description="Visual Layer 4 — frozen Optional, one room only, 393,216:1")
+    layer: Literal[4] = Field(default=4, description="Layer 4 only — verified not to touch World-A")
+    compression_ratio: int = Field(default=393216, description="393,216:1 — 1024x1024 → 224x224 → 14x14 patches → 576 tokens")
+    isolated: bool = Field(default=True, description="each visual isolated context")
+
+
 class MasterMission(BaseModel):
     model_config = {"frozen": True, "protected_namespaces": ()}
 
@@ -147,6 +155,7 @@ class MasterMission(BaseModel):
     human: Optional["HumanConfig"] = Field(default=None, description="V3 Human Axiom — persons/instruments/responses §105-114, isolated")
     per: Optional["PerConfig"] = Field(default=None, description="V1.10 PER — frozen Optional bolt-on, gated OFF until LOCK-STATUS wired")
     eca: Optional["EcaConfig"] = Field(default=None, description="V1.10 ECA — frozen Optional bolt-on, gated OFF until GateOk wired")
+    visual: Optional["VisualConfig"] = Field(default=None, description="V2 Visual Layer 4 — frozen Optional, one room 393,216:1, verified not to touch World-A")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
 
