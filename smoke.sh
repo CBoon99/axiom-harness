@@ -61,10 +61,10 @@ print('manifest canonical OK')
 "
 
 echo "[5] orphans, ai_computed_metrics, engine/sealed truthful, no Master mutation"
-grep -q '"ai_computed_metrics": false' "$ROOT/outputs/smoke_001/verify_result.json"
-grep -q '"orphans": \[\]' "$ROOT/outputs/smoke_001/verify_result.json"
-grep -q '"engine_present": true' "$ROOT/outputs/smoke_001/verify_result.json"
-grep -q '"sealed": true' "$ROOT/outputs/smoke_001/verify_result.json"
+grep -q '"ai_computed_metrics":false' "$ROOT/outputs/smoke_001/verify_result.json"
+grep -q '"orphans":\[\]' "$ROOT/outputs/smoke_001/verify_result.json"
+grep -q '"engine_present":true' "$ROOT/outputs/smoke_001/verify_result.json"
+grep -q '"sealed":true' "$ROOT/outputs/smoke_001/verify_result.json"
 # no Master mutation — Staging is inside Master but we check git diff only for Master root files, not Staging
 if git -C "$ROOT" diff --name-only | grep -q "^WORKING.md"; then echo "Master mutated!" && exit 1; fi
 echo "== OK smoke =="
