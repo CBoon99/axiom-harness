@@ -21,6 +21,12 @@ h1{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin-b
 <div class="card"><h3>HUMAN</h3><div>Q17/80 — “Would you tell a kind lie?” → 4/5</div><div class="kv">Receipt: RESULT+EVIDENCE+METHOD+…  — trail human-workbench</div></div>
 <div class="card"><h3>MODEL A — Boon Analyst</h3><div>Same feed @ 14:03:11 — responded 412 tok, tool read inbox/file.csv</div><div class="kv">Context: fresh · Sandboxed</div></div>
 <div class="card"><h3>MODEL B — Other</h3><div>Same feed @ 14:03:11 — responded 298 tok, no tool</div><div class="kv">Context: isolated · Comparative delta visible</div></div>
+<div class="card"><h3>MODEL C — LVM</h3><div>Same feed @ 14:03:11 — vision tokens 576 → “female subject, slight smile”</div><div class="kv">Context: isolated · Patch Illusion 6.5% coverage</div></div>
+</div>
+<div class="kv" style="margin-top:8px; display:flex; gap:8px; flex-wrap:wrap; align-items:center"><label style="display:flex; align-items:center; gap:6px"><input type="checkbox" checked> LIVE</label> <label style="display:flex; align-items:center; gap:6px"><input type="checkbox"> REPLAY</label> · <span>Feeds: NEWS · MARKET · WEATHER · WEB · CUSTOM API · SIMULATED</span> · <span>GO/STOP per feed</span></div>
+<div class="grid" style="margin-top:8px">
+<div class="card"><h3>Risk Room — alerts</h3><div class="kv">No alerts — thresholds: drift >0.5ΔH, orphan >0, cost >£10</div><div class="kv" style="color:#991b1b">■ 1 alert: Patch Illusion 91% refusal on RAW SCADA</div></div>
+<div class="card"><h3>Observatory — per-feed controls</h3><div class="kv">NEWS: ON · MARKET: LIVE · WEATHER: SIMULATED · WEB: CONTROLLED · CUSTOM: OFF · SIM: ON — each feed GO/STOP</div></div>
 </div>
 <div class="card" style="margin-top:12px"><h3>Live AI Observatory (V1.7, stub in V1)</h3><div class="kv">V1 shows the room with 2 models. V1.7 adds live feed plugins (NEWS/MARKET/WEB/CUSTOM API) + N-model comparative timeline + observation window (researcher sees AI, AI doesn't see researcher).</div></div>
 </div>

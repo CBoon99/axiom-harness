@@ -1,26 +1,42 @@
 <!doctype html>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wire — Environment Room</title>
+<title>Wire — Environment Room (scalable)</title>
 <style>
-:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--accent:#1d3a5f;--card:#fff}
+:root{--paper:#faf6ef;--ink:#1c1712;--line:#e0d4c4;--muted:#5c5348;--card:#fff}
 *{box-sizing:border-box}html,body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.4 system-ui,sans-serif}
-.wrap{max-width:1100px;margin:24px auto;padding:0 16px}
+.wrap{max-width:1120px;margin:24px auto;padding:0 16px}
 .nav{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 16px}.nav a{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:13px}
 .nav a.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 h1{font-size:18px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin-bottom:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0;overflow:hidden}
-.box .head{padding:8px 10px;background:#f3ece1;border-bottom:1px solid var(--line);font-weight:600;font-size:12px;display:flex;justify-content:space-between}
-.term{font:12px/1.5 ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:10px;height:220px;overflow:auto}
-.kv{font-size:12px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line);background:#faf6ef}
-@media(max-width:900px){.grid{grid-template-columns:1fr}}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.toolbar input, .toolbar select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px;max-height:520px;overflow:auto;padding:2px}
+.box{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.box .head{padding:6px 8px;background:#f3ece1;border-bottom:1px solid var(--line);font-size:11px;font-weight:600;display:flex;justify-content:space-between}
+.term{font:11px/1.4 ui-monospace,monospace;background:#0f0f12;color:#d6d0c6;padding:8px;height:120px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.kv{font-size:11px;color:var(--muted);padding:4px 8px;border-top:1px solid var(--line);background:#faf6ef}
+.pager{font-size:12px;color:var(--muted);margin-top:6px}
 </style>
 <div class="wrap">
 <div class="nav"><a href="control.html">Control</a><a class="active" href="environment.html">Environment</a><a href="timeline.html">Timeline</a><a href="live.html">Live</a><a href="evidence.html">Evidence</a></div>
-<h1>Environment Room — isolated sandboxes</h1><div class="sub">Heart of the laboratory. Each test is its own sealed terminal/world. V1 = terminal substrate (inspectable, replaceable).</div>
-<div class="grid">
-<div class="box"><div class="head"><span>TEST 001 — MODEL A · RUNNING</span><span style="color:#15803d">●</span></div><div class="term">$ run wtf-001<br>> model: analyst — fresh context<br>> prompt: S0 — cold start<br>> response: …<br>> tool: read inbox/file.csv → 3 rows<br>> sensor: token 412</div><div class="kv">Sandbox: <code>outputs/WTF-001/RUN-001/sandbox</code> — jailed, no upstream write</div></div>
-<div class="box"><div class="head"><span>TEST 002 — MODEL B · QUEUED</span><span style="color:#a16207">○</span></div><div class="term">$ queued — waiting for seal WTF-001<br>$ sealed sha256:9f…c1</div><div class="kv">Parallel 8 — other sandboxes isolated</div></div>
-<div class="box"><div class="head"><span>TEST 003 — HUMAN (V3) · READY</span><span style="color:#1d4ed8">◐</span></div><div class="term">$ human prompt: dilemma 17/80<br>$ response: scale 3/5<br>$ receipt: RESULT+EVIDENCE+METHOD…</div><div class="kv">V3 Human Axiom — same timeline, different subject</div></div>
+<h1>Environment Room — scalable (100s, not 3)</h1><div class="sub">Heart adapts: many experiments run, not every sandbox gets a full window. Compact grid + virtual scroll + filters. Full terminal on click. NST = nested terminals in one experiment supported.</div>
+<div class="toolbar">
+<input placeholder="Filter mission / model / status" style="flex:1;min-width:180px">
+<select><option>All statuses</option><option>RUNNING</option><option>QUEUED</option><option>PAUSED</option><option>COMPLETE</option><option>FAILED-POLICY</option></select>
+<select><option>Grid</option><option>List</option></select>
+<span class="pager">Showing 1–24 of 247 · page 1/11</span>
 </div>
+<div class="grid" id="grid">
+<!-- 3 full examples + 21 compact -->
+<div class="box"><div class="head"><span>TEST 001 — MODEL A · RUNNING</span><span style="color:#15803d">●</span></div><div class="term">$ run wtf-001<br>> prompt S0 → 412 tok<br>> tool read inbox/file.csv</div><div class="kv">WTF-001 / RUN-007 · outputs/WTF-001/RUN-007/sandbox · 00:03:11</div></div>
+<div class="box"><div class="head"><span>TEST 002 — MODEL B · QUEUED</span><span style="color:#a16207">○</span></div><div class="term">$ queued — seal 9f…c1<br>> waiting for slot 8/8</div><div class="kv">WTF-001 / RUN-008 · queued</div></div>
+<div class="box"><div class="head"><span>TEST 003 — HUMAN (V3) · READY</span><span style="color:#1d4ed8">◐</span></div><div class="term">$ human 17/80 → 4/5<br>> receipt RESULT+EVIDENCE…</div><div class="kv">HUMAN-2026-09-24 · ready</div></div>
+<div class="box"><div class="head"><span>TEST 004 — A · RUNNING</span><span style="color:#15803d">●</span></div><div class="term">… compact row …</div><div class="kv">RUN-009</div></div>
+<div class="box"><div class="head"><span>TEST 005 — B · COMPLETE</span><span style="color:#166534">✓</span></div><div class="term">… compact …</div><div class="kv">RUN-010 · sealed</div></div>
+<div class="box"><div class="head"><span>TEST 006 — A · FAILED-POLICY</span><span style="color:#991b1b">■</span></div><div class="term">attempt→denied</div><div class="kv">RUN-011 · evidence flagged</div></div>
+<!-- repeat to imply 100s -->
+<div class="box"><div class="head"><span>TEST 007 — A · RUNNING</span><span style="color:#15803d">●</span></div><div class="term">…</div><div class="kv">RUN-012</div></div>
+<div class="box"><div class="head"><span>TEST 008 — NST 1/4 in WTF-001</span><span style="color:#15803d">●</span></div><div class="term">NST nested terminals 1–4 in one experiment (your NST note)</div><div class="kv">WTF-001 NST · 4 terms in one env</div></div>
+</div>
+<div class="muted" style="margin-top:8px;font-size:12px">Adaptable: grid virtualized, paginated API <code>GET /master/timeline?limit=24&offset=0&status=RUNNING</code>, list view, filters. Click → full terminal drawer. 100s stay <code>O(1)</code> per row, not full DOM.</div>
 </div>

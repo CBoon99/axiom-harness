@@ -40,6 +40,10 @@ MANIFEST.json { files: [{path, sha256}, …] }  verify_result { csv_hash_ok:true
 <div style="margin-top:8px;border:1px solid #fecaca;background:#fef2f2;border-radius:8px;padding:8px;font:12px ui-monospace,monospace">Example row: <b>G-UD-003</b> — answer: B <span style="background:#fee2e2;padding:1px 6px;border-radius:4px">UNSUPPORTED</span> — gold: NEAR-OUT · contradiction class E — <span style="background:#fee2e2;padding:1px 6px;border-radius:4px">flagged red</span></div>
 </div>
 <div class="card">
+<h3>Compression / Patch Illusion receipts (HARDENED_LOCKS + PER_ECA)</h3><div class="kv">Patch Illusion: tokens 576 · ratio 393,216:1 · loss % · what survived / missed — from <code>math/PER_ECA_TECHNICAL_REFERENCE.md 5bb83c6e</code>. ECA: <code>GateOk |R|≤3 && ΔH>0.5</code> per <code>math/HARDENED_LOCKS.md 71e3be70</code> — sealed, not hard-coded.</div><pre>COMPRESSION_RECEIPT.json { original: 4000×3000, patch_grid: 14×14, tokens: 576, ratio: 393216:1, what: "sfumato", missed: "enigma", model: "llava-13b" }
+ECA_RECEIPT.json { gate: "ΔH>0.5", |R|: 2, receipt: "sha256:abc…", per_eca: "OFF in V1.8" }</pre>
+</div>
+<div class="card">
 <h3>Export</h3><div class="kv">Complete Report Pack → <code>deliverable.zip</code> + <code>MANIFEST</code> + <code>verify.html</code> + <code>trail.html</code>. Promotion through claim gate only (<code>BRAND_BIBLE §19 + CLAIM_GATE</code>, TESTED vs UNTESTED).</div>
 </div>
 </div>
