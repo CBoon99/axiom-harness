@@ -25,7 +25,7 @@ class TestPatches(unittest.TestCase):
 
     def test_allowed_prefixes_include_axiom(self):
         self.assertIn("scripts/factory_", ALLOWED_SCRIPT_PREFIXES)
-        self.assertIn("AXIOM_", ALLOWED_SCRIPT_PREFIXES)
+        self.assertIn("AXIOM_WB_", ALLOWED_SCRIPT_PREFIXES)
 
     def test_is_safe_blocks_traversal(self):
         self.assertFalse(is_safe_relative("../escape"))

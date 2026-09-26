@@ -4,8 +4,15 @@
 
 ## Required
 - `Staging/` root with `axiom_harness/ + missions/ + tests/ + app/ + docs/ + proof/ + outputs/`
-- Python `/Library/Developer/CommandLineTools/usr/bin/python3` with `pydantic 2.5.0 + pytest 7.4.3` (default `python3` has no pydantic due to `platform.mac_ver ''`)
+- Python `/Library/Developer/CommandLineTools/usr/bin/python3` (`3.9.6`, pinned in `.python-version`) with `pydantic 2.5.0 + pytest 7.4.3` (default `python3` has no pydantic due to `platform.mac_ver ''`) — verify `pydantic.__version__ == "2.5.0"` via that binary
 - `agent-browser 0.34.0 + Chrome 152` at `~/.agent-browser/browsers`
+
+## One-liner (stranger cold run)
+```bash
+PYTHONPATH="$PWD" PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH" /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest -q
+env PYTHONPATH="$PWD" PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH" bash smoke.sh
+```
+Pinned: `.python-version` `3.9.6` — use CLT python only, never `python` or system `python3` without PATH override.
 
 ## Environment
 - **Mandatory:** `STAGING_ROOT = Path(__file__).parents[1]` asserts `axiom_harness/` exists

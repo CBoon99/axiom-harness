@@ -6,7 +6,7 @@ from axiom_harness.paths import ALLOWED_SCRIPT_PREFIXES
 class TestAllowlistAnchored(unittest.TestCase):
     def test_prefixes(self):
         self.assertIn("scripts/factory_", ALLOWED_SCRIPT_PREFIXES)
-        self.assertIn("AXIOM_", ALLOWED_SCRIPT_PREFIXES)
+        self.assertIn("AXIOM_WB_", ALLOWED_SCRIPT_PREFIXES)
 
     def test_allows_axiom_wb(self):
         _assert_allowlist(["python3","-m","axiom_wb","evaluate","x"])
@@ -15,8 +15,8 @@ class TestAllowlistAnchored(unittest.TestCase):
     def test_allows_factory_prefix(self):
         _assert_allowlist(["python3","-m","scripts/factory_foo"])
         _assert_allowlist(["python3","-m","scripts/factory_bar","--arg","1"])
-        _assert_allowlist(["python3","-m","AXIOM_test"])
-        _assert_allowlist(["python3","-m","AXIOM_EVO"])
+        _assert_allowlist(["python3","-m","AXIOM_WB_test"])
+        _assert_allowlist(["python3","-m","AXIOM_WB_EVO"])
 
     def test_blocks_evil_smuggle(self):
         with self.assertRaises(ValueError) as cm:

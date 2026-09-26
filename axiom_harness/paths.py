@@ -18,7 +18,7 @@ STAGING_DOCS = STAGING_ROOT / "docs"
 MISSIONS = STAGING_ROOT / "missions"
 OUTPUTS = STAGING_ROOT / "outputs"  # gitignored staging outputs
 
-ALLOWED_SCRIPT_PREFIXES = ["scripts/factory_", "AXIOM_"]  # allowlist — factory + AXIOM_* (TECH_SPEC §35)
+ALLOWED_SCRIPT_PREFIXES = ["scripts/factory_", "AXIOM_WB_"]  # allowlist — factory + AXIOM_WB_* only (G10 narrow, §35)
 
 def _decoded(p: str) -> str:
     # iterative unquote until stable — catches %2525252e depth>3

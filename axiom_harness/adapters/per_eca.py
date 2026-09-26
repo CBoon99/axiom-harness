@@ -15,9 +15,9 @@ def ensure_off(per_eca_state: dict):
 def seal_per_eca(experiment_id: str, out_dir, per_eca_state: dict):
     ensure_off(per_eca_state)
     out_dir.mkdir(parents=True, exist_ok=True)
-    import json
+    import json, datetime as _dt
     from axiom_harness.manifest import write_manifest
     (out_dir / "PER_ECA_SKIPPED.json").write_text(json.dumps({"experiment_id": experiment_id, "per_eca_state": per_eca_state, "ai_computed_metrics": False}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
     write_manifest([str(out_dir / "PER_ECA_SKIPPED.json")], out_dir / "MANIFEST.json")
-    (out_dir / "verify_result.json").write_text(json.dumps({"csv_hash_ok": True, "orphans": [], "ai_computed_metrics": False}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
+    (out_dir / "verify_result.json").write_text(json.dumps({"csv_hash_ok": True, "orphans": [], "ai_computed_metrics": False, "sealed": True, "sealed_by": "harness", "sealed_at": _dt.datetime.now(_dt.timezone.utc).isoformat(), "instrument": "per_eca", "sop_version": "1.0-PATCH-ILLUSION"}, sort_keys=True, ensure_ascii=False, separators=(",", ":")))
     return out_dir
