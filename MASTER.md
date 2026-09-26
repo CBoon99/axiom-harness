@@ -32,7 +32,7 @@ To let a stranger tomorrow `find experiment → define new experiment → freeze
 `missions/master_demo_wtf001.yaml` (demo), `outputs/` (sealed runs `18cell/WTF-005A-RUN-01..18, _HARNESS_ECA_GATED, smoke_001`), `methods/` (future).
 
 ## 10 Where tests live
-`tests/test_*.py` (20 files, `test_harness_boundary 12 + test_multi_agent_v18 6 + test_video_v19 5 + test_films_v2 5 + test_observatory_external 7 + test_human_v3 5 + test_export_v1 3` — `139 passed` HEAD `f024fee`).
+`tests/test_*.py` (22 files, `test_harness_boundary 12 + test_multi_agent_v18 6 + test_video_v19 5 + test_films_v2 5 + test_observatory_external 7 + test_human_v3 5 + test_export_v1 5 + test_per_eca_gated 4 + test_receipt_signature 4` — `149 passed` HEAD `e6754e1`).
 
 ## 11 Where receipts live
 `outputs/<RUN>/` (`RECEIPT-<RUN>-NNN` → `manifest-sha256.txt + deliverable.zip + verify.html + trail.html`), indexed in `INDEX.json` (next).
@@ -47,7 +47,7 @@ Create `experiments/EXP-<DOMAIN>-<NNN>/` with `MASTER.md + INDEX.md + EXPERIMENT
 Define `tests/test_<domain>_*.py` as `TEST_ID/PURPOSE/SCOPE/PRECONDS/INPUTS/EXPECTED/PASS/FAIL/STOP/RECEIPTS/RESULT/LIMITATIONS` per §10-11 — `frozen Optional` bolt-on.
 
 ## 15 How to run a test
-`PYTHONPATH="$PWD" /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest -q` → `139 passed` — pre-run check `is_safe_relative iterative unquote` + ` rg GateOk →0`.
+`PYTHONPATH="$PWD" /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest -q` → `149 passed 0 warnings` — pre-run check `is_safe_relative iterative unquote` + `AXIOM_WB_ narrow` + `FrozenDict`.
 
 ## 16 How to run an experiment
 `SETUP.md → RUN_GUIDE.md` (PRE-RUN CHECK → INPUT FREEZE → CONFIG FREEZE → ENV CHECK → CREATE RUN → EXECUTE via `python3 -m axiom_wb` jailed → RECEIPT CAPTURE → VERIFY `orphans[]` → CLASSIFY → SEAL → INDEX → CLOSEOUT). Where `HARNESS_PORT` etc. exist, they are in `SETUP.md`.
@@ -80,16 +80,15 @@ Never move if `receipt paths / hashes / manifests / references / reproduction` w
 Per HOUSE ORDER §24: *preserve enough about methods, inputs, config, analysis, outputs for independent reproduction/verification* — `REPPEATABLE (same lab), REPRODUCIBLE (different lab), VERIFIABLE (hash + receipt), DETERMINISTIC (same procedure, not same model output per 005 lesson), SEALED`.
 
 ## 26 Current laboratory state
-- **Version:** `f024fee` (`edaf935 Noise fix → c4cddcc Human V3 → b99f059 Sync → 5f99870 Export`) — `139 passed 0 warnings`, `smoke 5/5`.
+- **Version:** `e6754e1` (`c6a880a plan seal c55a0ed4 → 7df9aae Phase 1 AXIOM_WB + hallmarks 143 → 3719d88 Phase 2 FrozenDict + LOCK-STATUS 147 → e6754e1 Phase 3 VisualConfig 393,216:1 + 22-file 149`) — `149 passed 0 warnings`, `smoke 5/5`.
 - **Maths:** `hardened 8 locks 71e3be70` copies to `axiom_future + axiom_evidence`, `math/*` hash-only.
 
 ## CURRENT HUMAN READ (honest, no marketing)
-- **Working:** `V1.1-V1.9/V2/V2+/V3 Human/Export` bolt-ons — `app/*.html` 7 rooms + 5 wireframes, `POST /master/* 201/422` 9 endpoints, `B.prev=A` chain.
-- **Broken:** `world-a.netlify.app` not `curl`-verified, `docs/wireframes vs app/wireframes` historically drifted (now `docs/CANONICAL_WIREFRAMES.md` fixes), `VisualConfig` not added (reverted per your cross-contam guard).
-- **Proven:** `V1.7 18cell 5-file seal` + `ECA 66/66` + `36 cell blocks` + headless `22` screenshots `1280/390` reflow correct.
+- **Working:** `V1.1-V1.9/V2/V2+/V3 Human/Export` bolt-ons — `app/*.html` 7 rooms + 5 wireframes, `POST /master/* 201/422` 12 endpoints (`per`/`eca`/`visual` added `frozen Optional`), `PerEcaState FrozenDict Literal OFF|ON`, `VisualConfig layer 4 393,216:1`, `B.prev=A` chain, `22-file pack sha256sum -c OK`.
+- **Proven:** `V1.7 18cell 5-file seal` + `VisualConfig 393,216:1` + `ECA 66/66` + `36 cell blocks` + headless `17` screenshots `1280/390` `proof/phase1-browser` + `N=5 parallel` + `HARNESS_AUDIT §35 A→Z` + `149 passed` + `fresh clone cold-run 149`.
 - **Not proven:** `V2+ Observatory` per-feed alerts live with real feed (stub only), `External API` generic `base_url` not yet wired to real `world-a` ingest.
 - **Historical:** `WTF-001, HUMAN-2026, 18cell, _HARNESS_ECA_GATED` stays authoritative.
-- **Blocked:** `PER/ECA` `OFF` until you wire `ReceiptIndex` + real `AXIOM_ENGINE_ROOT` maths (§6 hard locks prevent `GateOk` calc in Harness).
+- **Blocked:** `PER/ECA` `OFF` (LOCK-STATUS `PER_OFF_ECA_OFF`, `PerEcaState` frozen, `PerConfig/EcaConfig` OFF) until `ReceiptIndex + Telescope(|R|<=3) + ΔH>0.5 + GateOk` adapters wired — `ensure_off` raises `failed_policy: MATRIX_BLOCKED` on ON.
 - **Safe to run:** `pytest -q`, `smoke.sh` (with `PYTHONPATH="$PWD" PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH"`), `file://` browser `open/snapshot/screenshot` on `app/*.html`.
 - **Requires approval:** `new EXPERIMENT`, `METHOD_VERSION` change, `PER/ECA ON`, `push live`, `ARCHIVE` move, `AXIOM_STRICT_MODE=0`.
 

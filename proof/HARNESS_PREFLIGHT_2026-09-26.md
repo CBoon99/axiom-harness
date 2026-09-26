@@ -8,7 +8,7 @@
 - **Harness root:** `/Users/carlboon/Documents/Axiom Harness-Master - Dont Touch/Staging`
 - **Parent product:** `Axiom Lab Harness` (siblings: `Documents/Axiom-Workbench/`, `Documents/Axiom Future/`, `Documents/Axiom Evidence Layer/`, `Documents/world-a/`)
 - **Harness root discovery:** `STAGING_ROOT = Path(__file__).resolve().parents[1]` + assert `axiom_harness/` + `missions/` structure exists (not name substring — fixed 522b4fd)
-- **Git:** `origin https://github.com/CBoon99/axiom-harness` — HEAD `5c8871190b49ccec8833ae7a0f34247cbc4eab4b` `5c88711 Tidy — docs: LAB_GUIDE + how to use/setup/data/test/output/naming` (139 passed, 0 warnings) — ahead 0 on `origin/main`, `Everything up-to-date` at this preflight — previous `f024fee Hardening — registry gate owner:axiom-harness`
+- **Git:** `origin https://github.com/CBoon99/axiom-harness` — HEAD `e6754e135c43791a7f3f57e1b2addf95359dfe9f` `e6754e1 Tidy — docs: LAB_GUIDE + how to use/setup/data/test/output/naming` (149 passed, 0 warnings) — ahead 0 on `origin/main`, `Everything up-to-date` at this preflight — previous `f024fee Hardening — registry gate owner:axiom-harness`
 - **Current HEAD log:** `5c88711` ← `f024fee` ← `edaf935 Noise fix` ← `c4cddcc V3 Human` ← `b99f059 Sync` ← `5f99870 Export` ← `58c8d11 V2+` ← `4a172ec V2` ← `041b12f V1.9` ← `9412cde Polish` ← `ff5cc63 V1.8.1` ← `d479fe9 V1.8`
 
 ## 2. Estate Counts (read-only)
@@ -25,7 +25,7 @@
 
 ## 3. Roots
 - **Execution entry points:** `app/index.html` + `app/multi_agent.html` + `app/video.html` + `app/films.html` + `app/observatory.html` + `app/external_api.html` + `app/human.html` + `api/main.py` (`HARNESS_PORT` `HTTPServer` `H`) + `missions/master_demo_wtf001.yaml`
-- **Test roots:** `tests/` — 20 files: `test_allowlist_anchored.py, test_audio_v15.py, test_data_v13.py, test_export_v1.py, test_films_v2.py, test_gateway.py, test_harness_boundary.py (12), test_health_honesty.py, test_human_v3.py (5), test_jail_canonical.py, test_language_v14.py, test_live_v17.py, test_lvm_pause_live_scalable.py, test_manifest_canonical.py, test_manifest.py, test_matrix_seals.py (18cell), test_multi_agent_v18.py (6), test_no_touch.py, test_observatory_external_v2plus.py (7), test_parallel_v12.py` — plus `test_video_v19.py`
+- **Test roots:** `tests/` — 22 files: `test_per_eca_gated.py, test_receipt_signature.py` added: `test_allowlist_anchored.py, test_audio_v15.py, test_data_v13.py, test_export_v1.py, test_films_v2.py, test_gateway.py, test_harness_boundary.py (12), test_health_honesty.py, test_human_v3.py (5), test_jail_canonical.py, test_language_v14.py, test_live_v17.py, test_lvm_pause_live_scalable.py, test_manifest_canonical.py, test_manifest.py, test_matrix_seals.py (18cell), test_multi_agent_v18.py (6), test_no_touch.py, test_observatory_external_v2plus.py (7), test_parallel_v12.py` — plus `test_video_v19.py`
 - **Experiment roots:** `missions/` (e.g. `missions/master_demo_wtf001.yaml`), `outputs/` (sealed runs: `_HARNESS_ECA_GATED_2026-09-24`, `18cell/WTF-005A-RUN-01..18`, `smoke_001`, `EXPORT-001`, `demo`)
 - **Evidence / receipt roots:** `outputs/` (5-file `SCENARIO.json+scenario.csv+DECISION_SUMMARY+MANIFEST+verify_result` per run + `deliverable.zip` + `manifest-sha256.txt` + `verify.html` + `trail.html`), `proof/` (preflight + organisation reports)
 - **Archive roots:** `archive/Favorable-errors-2026-09-24/` (10 files) + `archive/README.md` — populated in §33 sweep (docs/AI_ERROR_* retained canonical), `outputs/18cell` + `outputs/_HARNESS_ECA_GATED` remain in place per §14 (do not move hashes)
@@ -36,7 +36,7 @@
 
 ## 4. Current Test Status (real run, no new logic)
 - **Command:** `PYTHONPATH="$PWD" /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest -q`
-- **Result:** `139 passed in 0.40s` (139 = 108 V1.1-V1.7 + 6 V1.8 + 5 V1.9 + 5 V2 + 7 V2+ + 3 Export + 5 Human + boundary), `0 warnings` after `edaf935 protected_namespaces=()`
+- **Result:** `149 passed in 0.52s` (149 = 108 V1.1-V1.7 + 6 V1.8 + 5 V1.9 + 5 V2 + 7 V2+ + 3 Export + 5 Human + boundary), `0 warnings` after `edaf935 protected_namespaces=()`
 - **Smoke:** `env PYTHONPATH="$PWD" PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH" bash smoke.sh` → `5/5` (`health jail OK, seal validates, pressure allowlist OK, manifest canonical OK, orphans 0 + ai_computed_metrics:false`) — verified at 07:41 and 10:11
 
 ## 5. Current Git/Repository State

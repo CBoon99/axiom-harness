@@ -1,6 +1,6 @@
 # Axiom-Harness-Staging — Staging for Axiom Harness Master
 
-**Status:** `HARNESS_V1_REPRODUCIBLE_PASS` — **HEAD `b2fca7e` 2026-09-24 20:18** — `108 passed, 2 warnings, smoke 5/5` (`pytest -q`) — gates `GATE 1 19ccf2d → GATE 5 01c99af → COMMERCIAL ef3573e → TIGHTEN 70b8cf1 → DOCS b2fca7e` — **Master (`Axiom Harness Master/`) FROZEN `-do not touch` at 2026-09-24 05:39** (WORKING 152 + MEMORY 117) unchanged — this folder is the writable Staging where V1→V2+ built — **next-agent pickup: `docs/HANDOFF_2026-09-24_FULL_ACCOUNT.md`** (read first — 11 files in order, hashes, verification commands).
+**Status:** `HARNESS_V1_REPRODUCIBLE_PASS` — **HEAD `e6754e1` 2026-09-26 22:15** — `149 passed 0 warnings, smoke 5/5` (`PYTHONPATH="$PWD" /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest -q`) — gates `c6a880a plan seal c55a0ed4 → 7df9aae Phase 1 AXIOM_WB narrow + hallmarks 143 → 3719d88 Phase 2 FrozenDict + PerConfig/EcaConfig + LOCK-STATUS 147 → e6754e1 Phase 3 VisualConfig 393,216:1 + 22-file pack 149` + `HARNESS_AUDIT_2026-09-26.md §35 A→Z` — **Master (`Axiom Harness Master/`) FROZEN `-do not touch` at 2026-09-24 05:39** unchanged — this folder is the writable Staging where V1→V2+ built — **cold-run: `git clone file:// → 149 passed + 5/5 + file:// 200` green unaided.**
 
 **Briefs (inside Master, read-only):**
 - `Axiom Harness Master/AXIOM HARNESS Brief (1).md` 3,172 lines
