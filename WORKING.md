@@ -25,6 +25,7 @@
 - **Phase 2 `3719d88`:** PER/ECA gated — FrozenDict, PerConfig/EcaConfig, LOCK-STATUS.json, POST /per+/eca+/seal OFF, 147 passed
 - **Phase 3 `e6754e1`:** Export real — VisualConfig Layer 4 `393,216:1` one room, 22-file pack, 149 passed
 - **Phase 4 `a26399e`:** Audit §35 A→Z + sync — `HARNESS_AUDIT_2026-09-26.md` read-only trace both directions, who+when hallmarked, `WORKING.md` + `README.md` + `MASTER.md` to `a26399e`, preflight refresh to `a26399e`, final QA `149 passed + 5/5 + cold-run green` — **pushed to origin/main**
-- **Next:** No Phase 5 (human 80×8D) tonight, no World-A, no commercial — lab is LIVE-ready, `push live` done `5033370..a26399e`.
+- **Deep Dive `HARNESS_TECHNICAL_DEEP_DIVE_2026-09-26.md` (8 agents + critic):** seal ready `SEAL-DEMO-2026-09-26` 5-file canonical hallmarks + 22-file `shasum OK`, `149 passed + 5/5 + cold-run green` multi-agent isolated, code quality `frozen 15 rooms` + hygiene `AXIOM_WB_ + is_safe_relative`, security `jail + allowlist + LOCK-STATUS + frozen`, tech `3.9.6 + pydantic 2.5.0 + Chrome 152`, UX `paper #faf6ef ink #1c1712 12-page`, modular scaling `16 rooms 7 doors 15 POST 1..64`, gaps filled (see deep-dive §8-9 — 20 false-negative unresolved, all non-blocking)
+- **Next:** `55b52cf` synced `WORKING.md` to `a26399e` + this deep-dive — lab **LIVE-ready** for first experiments (`POST /master/seal` → `outputs/<RUN>/` → `deliverable.zip`), no Phase 5 tonight, no World-A.
 
-*Updated per House Order §35-36 2026-09-26 Phase 4 — 149 passed — final HEAD a26399e.*
+*Updated per House Order §35-36 2026-09-26 Deep Dive — 149 passed — final HEAD 55b52cf.*
