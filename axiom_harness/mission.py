@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from enum import Enum
 from typing import Literal, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class ParticipantKind(str, Enum):
@@ -82,6 +82,42 @@ class ParallelConfig(BaseModel):
     isolated: bool = Field(default=True, description="each sandbox isolated context/memory/tools")
 
 
+class PerEcaState(BaseModel):
+    model_config = {"frozen": True, "protected_namespaces": ()}
+    per: Literal["OFF", "ON"] = Field(default="OFF", description="PER toggle — Literal OFF|ON, frozen inner")
+    eca: Literal["OFF", "ON"] = Field(default="OFF", description="ECA toggle — Literal OFF|ON, frozen inner")
+
+    def __getitem__(self, key):
+        if key in ("per", "eca"):
+            return getattr(self, key)
+        raise KeyError(key)
+
+    def get(self, key, default=None):
+        return getattr(self, key) if key in ("per", "eca") else default
+
+    def __contains__(self, key):
+        return key in ("per", "eca")
+
+    def __eq__(self, other):
+        if isinstance(other, dict):
+            return self.per == other.get("per") and self.eca == other.get("eca")
+        if isinstance(other, PerEcaState):
+            return self.per == other.per and self.eca == other.eca
+        return False
+
+
+class PerConfig(BaseModel):
+    model_config = {"frozen": True, "protected_namespaces": ()}
+    enabled: bool = Field(default=False, description="PER bolt-on — frozen Optional, behind ensure_off + LOCK-STATUS gate")
+    mode: Literal["OFF", "ON"] = Field(default="OFF", description="PER mode — OFF until ReceiptIndex+Telescope+ΔH gates wired")
+
+
+class EcaConfig(BaseModel):
+    model_config = {"frozen": True, "protected_namespaces": ()}
+    enabled: bool = Field(default=False, description="ECA bolt-on — frozen Optional, behind ensure_off + LOCK-STATUS gate")
+    mode: Literal["OFF", "ON"] = Field(default="OFF", description="ECA mode — OFF until GateOk wired")
+
+
 class MasterMission(BaseModel):
     model_config = {"frozen": True, "protected_namespaces": ()}
 
@@ -90,7 +126,7 @@ class MasterMission(BaseModel):
     participant: ParticipantKind = Field(default=ParticipantKind.MODEL)
     model: str = Field(default="analyst", description="model A/B/C when participant=MODEL")
     model_version: str = Field(default="llama-3.2-11b", description="reproducibility — added per review gap 2")
-    per_eca_state: dict = Field(default={"per": "OFF", "eca": "OFF"}, description="PER/ECA toggles per WTF-LAB §6 — review gap 2")
+    per_eca_state: PerEcaState = Field(default_factory=PerEcaState, description="PER/ECA toggles per WTF-LAB §6 — FrozenDict Literal OFF|ON, inner immutable")
     cost: Optional[dict] = Field(default=None, description="{tokens_input, tokens_output, cost_usd, provider} — review gap 2")
     context_kind: ContextKind
     env_kind: EnvKind
@@ -109,8 +145,19 @@ class MasterMission(BaseModel):
     observatory: Optional["ObservatoryConfig"] = Field(default=None, description="V2+ Observatory — Risk/Alerts per-feed §66-67, isolated")
     external_api: Optional["ExternalAPIConfig"] = Field(default=None, description="Future External API — §51 GET /human/{id}/trail reserved, isolated")
     human: Optional["HumanConfig"] = Field(default=None, description="V3 Human Axiom — persons/instruments/responses §105-114, isolated")
+    per: Optional["PerConfig"] = Field(default=None, description="V1.10 PER — frozen Optional bolt-on, gated OFF until LOCK-STATUS wired")
+    eca: Optional["EcaConfig"] = Field(default=None, description="V1.10 ECA — frozen Optional bolt-on, gated OFF until GateOk wired")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
+
+    @field_validator("per_eca_state", mode="before")
+    @classmethod
+    def _validate_per_eca_state(cls, v):
+        if isinstance(v, dict) and len(v) == 0:
+            raise ValueError("failed_policy: per_eca_state empty — requires per+eca")
+        if v is None:
+            raise ValueError("failed_policy: per_eca_state missing")
+        return v
 
 
 class LiveFeedKind(str, Enum):

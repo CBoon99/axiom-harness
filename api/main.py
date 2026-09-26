@@ -23,21 +23,51 @@ class H(BaseHTTPRequestHandler):
 
     def do_POST(self):
         parsed = urlparse(self.path)
-        if parsed.path.startswith("/api/master/seal"):
-            # promotion gate — config_hash via capability gate, secret not in evidence
+        if parsed.path.startswith("/api/master/per") or parsed.path.startswith("/api/master/eca"):
             length = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(length) if length else b'{}'
             try:
                 from axiom_harness.mission import MasterMission
+                from axiom_harness.adapters.per_eca import ensure_off, gate_ok
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                # PER/ECA gated bolt-on — keep CORPUS ON / PER OFF / ECA OFF until LOCK-STATUS gate
+                ensure_off(m.per_eca_state)
+                # PerConfig/EcaConfig frozen Optional check — hash-only, no duplicated maths
+                if m.per and getattr(m.per, "mode", "OFF") == "ON":
+                    raise ValueError("failed_policy: PER ON requires LOCK-STATUS next_authorized_action=PER_ON && gated wiring")
+                if m.eca and getattr(m.eca, "mode", "OFF") == "ON":
+                    raise ValueError("failed_policy: ECA ON requires LOCK-STATUS next_authorized_action=ECA_ON && gated wiring")
+                body = {"sealed": True, "gate": "OFF", "provider_call_count": 0, "experiment_id": m.id, "per_eca_state": m.per_eca_state.model_dump() if hasattr(m.per_eca_state, "model_dump") else m.per_eca_state}
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e), "provider_call_count": 0}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+                return
+            self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+            self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            return
+        if parsed.path.startswith("/api/master/seal"):
+            # promotion gate — config_hash via capability gate, secret not in evidence + GateOk
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                from axiom_harness.adapters.per_eca import ensure_off, gate_ok
                 data = json.loads(raw.decode() or "{}")
                 m = MasterMission(**data)
                 # capability gate: require model_version + per_eca_state + cost
                 if not m.model_version or not m.per_eca_state:
                     raise ValueError("failed_policy: missing model_version/per_eca_state")
-                body = {"sealed": True, "config_hash": m.protocol, "experiment_id": m.id, "capability": "sealed via STAGING_ROOT, secret not in evidence"}
+                # PER/ECA OFF gate — hash-only, gated wiring (no duplicated maths)
+                ensure_off(m.per_eca_state)
+                if m.per and getattr(m.per, "mode", "OFF") == "ON":
+                    raise ValueError("failed_policy: PER ON requires LOCK-STATUS + gated wiring")
+                if m.eca and getattr(m.eca, "mode", "OFF") == "ON":
+                    raise ValueError("failed_policy: ECA ON requires LOCK-STATUS + gated wiring")
+                body = {"sealed": True, "config_hash": m.protocol, "experiment_id": m.id, "capability": "sealed via STAGING_ROOT, secret not in evidence", "gate": "OFF", "provider_call_count": 0}
             except Exception as e:
                 self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
-                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+                self.wfile.write(json.dumps({"failed_policy": str(e), "provider_call_count": 0}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
                 return
             self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
             self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())

@@ -1,0 +1,11 @@
+{
+  "next_authorized_action": "PER_OFF_ECA_OFF",
+  "corpus": "ON",
+  "per": "OFF",
+  "eca": "OFF",
+  "gate": "MATRIX_BLOCKED_UNTIL_SWITCH_WIRED — PER/ECA OFF in V1, requires ReceiptIndex + Telescope(|R|<=3) + Phase-6 ΔH>0.5 + ECA GateOk(T_max)",
+  "sealed_by": "harness",
+  "sealed_at": "2026-09-26T22:30:00Z",
+  "instrument": "harness",
+  "sop_version": "1.0-PATCH-ILLUSION"
+}
