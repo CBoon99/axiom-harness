@@ -241,6 +241,42 @@ class H(BaseHTTPRequestHandler):
             except Exception as e:
                 self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
                 self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+        elif parsed.path.startswith("/api/master/observatory"):
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                if m.observatory is None:
+                    raise ValueError("failed_policy: observatory missing — §66-67")
+                oc = m.observatory
+                if not oc.feeds:
+                    raise ValueError("failed_policy: observatory feeds empty — requires at least one")
+                body = {"observatory": True, "experiment_id": m.id, "feeds": [f.value for f in oc.feeds], "alert_on_drift": oc.alert_on_drift, "isolated": oc.isolated, "config_hash": m.protocol, "sealed": True}
+                self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+        elif parsed.path.startswith("/api/master/external-api"):
+            length = int(self.headers.get('Content-Length', 0))
+            raw = self.rfile.read(length) if length else b'{}'
+            try:
+                from axiom_harness.mission import MasterMission
+                data = json.loads(raw.decode() or "{}")
+                m = MasterMission(**data)
+                if m.external_api is None:
+                    raise ValueError("failed_policy: external_api missing — §51")
+                ec = m.external_api
+                if not ec.base_url:
+                    raise ValueError("failed_policy: base_url required")
+                body = {"external_api": True, "experiment_id": m.id, "base_url": ec.base_url, "trail_path": ec.trail_path, "isolated": ec.isolated, "config_hash": m.protocol, "sealed": True}
+                self.send_response(201); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps(body, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
+            except Exception as e:
+                self.send_response(422); self.send_header("Content-Type","application/json"); self.end_headers()
+                self.wfile.write(json.dumps({"failed_policy": str(e)}, sort_keys=True, ensure_ascii=False, separators=(",", ":")).encode())
         elif parsed.path.startswith("/api/master/films"):
             length = int(self.headers.get('Content-Length', 0))
             raw = self.rfile.read(length) if length else b'{}'

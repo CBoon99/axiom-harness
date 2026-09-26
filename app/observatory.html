@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Observatory — Risk/Alerts</title>
+<link rel="stylesheet" href="app.css">
+<div class="wrap">
+<nav style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+<a href="index.html">Control</a> <a href="../docs/wireframes/timeline.html">Timeline</a> <a href="video.html">Video</a> <a href="films.html">Films</a> <a href="observatory.html" style="font-weight:700">Observatory</a> <a href="external_api.html">External API</a>
+</nav>
+<div class="card">
+<h2 style="margin:0 0 8px">Observatory — Risk/Alerts per-feed §66-67</h2>
+<p class="muted">V2+ bolt-on — per-feed `NEWS·MARKET·WEATHER·WEB·CUSTOM_API·SIMULATED` Risk/Alerts, each isolated. Alerts on `ΔH>0.5` drift + `orphan[]`.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+<label>Feeds: <select id="feeds" multiple style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;height:80px"><option selected>NEWS</option><option>MARKET</option><option>WEATHER</option><option>WEB</option><option>CUSTOM_API</option><option>SIMULATED</option></select></label>
+<label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="drift" checked> Alert drift ΔH>0.5</label>
+<label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="orphan" checked> Alert orphan</label>
+</div>
+<div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="sealObs">Seal Observatory</button></div>
+<div style="margin-top:10px" class="kv">Sealed: <code id="hash">sha256: —</code></div>
+</div>
+<div class="card" style="margin-top:12px">
+<h3 style="margin:0 0 6px">Alerts (per-feed, isolated)</h3>
+<div class="kv">NEWS: drift <span style="color:var(--ok)">OK</span> · MARKET: <span style="color:var(--warn)">orphan 99.99</span> — isolated alerts, no shared state</div>
+<div class="muted" style="margin-top:6px">Each feed `GO/STOP` isolated — alerts don't leak across feeds.</div>
+</div>
+</div>
+<script>
+const feeds=document.getElementById('feeds'), d=document.getElementById('drift'), o=document.getElementById('orphan'), h=document.getElementById('hash');
+function upd(){ const v=[...feeds.selectedOptions].map(o=>o.value).join(','); h.textContent='sha256:'+btoa(v+d.checked+o.checked).slice(0,8); }
+feeds.onchange=upd; d.onchange=upd; o.onchange=upd; upd();
+document.getElementById('sealObs').onclick=()=>alert('Seal → POST /master/observatory 201 '+h.textContent);
+</script>

@@ -106,6 +106,8 @@ class MasterMission(BaseModel):
     multi_agent: Optional["MultiAgentConfig"] = Field(default=None, description="V1.8 Multi-agent — A Analyst B Critic C Maker D Observer E Adversary, isolated")
     video: Optional["VideoConfig"] = Field(default=None, description="V1.9 Video Timeline — §24 upload/live_feed/synthetic, presentation not proof §70")
     films: Optional["FilmsConfig"] = Field(default=None, description="V2 Films — Experiment→Story §25/27, isolated render")
+    observatory: Optional["ObservatoryConfig"] = Field(default=None, description="V2+ Observatory — Risk/Alerts per-feed §66-67, isolated")
+    external_api: Optional["ExternalAPIConfig"] = Field(default=None, description="Future External API — §51 GET /human/{id}/trail reserved, isolated")
     # pressure/comparison are V1 gaps but reserved — no handler until exercised
     # cost estimate shown before GO (§15) lives in params.cost_estimate
 
@@ -177,6 +179,25 @@ class FilmsConfig(BaseModel):
     template: Literal["chronological", "comparative", "ghost"] = Field(default="chronological", description="story template §25")
     auto_chapters: bool = Field(default=True, description="auto chapters from timeline events §25")
     isolated: bool = Field(default=True, description="each film isolated render context")
+
+
+class ObservatoryConfig(BaseModel):
+    model_config = {"frozen": True}
+
+    enabled: bool = Field(default=False, description="V2+ Observatory enable — Risk/Alerts per-feed §66-67, isolated")
+    feeds: list[LiveFeedKind] = Field(default_factory=list, description="per-feed Risk/Alerts §66 NEWS/MARKET/WEATHER/WEB/CUSTOM/SIMULATED")
+    alert_on_drift: bool = Field(default=True, description="alert ΔH>0.5 drift §66")
+    alert_on_orphan: bool = Field(default=True, description="alert orphan[] §66")
+    isolated: bool = Field(default=True, description="each alert isolated context")
+
+
+class ExternalAPIConfig(BaseModel):
+    model_config = {"frozen": True}
+
+    enabled: bool = Field(default=False, description="Future External API enable — §51, isolated")
+    base_url: str = Field(default="https://api.example.org", description="external API base — generic, not hard-coded provider")
+    trail_path: str = Field(default="/human/{id}/trail", description="GET /human/{id}/trail reserved §51")
+    isolated: bool = Field(default=True, description="each external call isolated")
 
 
 class SensorKind(str, Enum):

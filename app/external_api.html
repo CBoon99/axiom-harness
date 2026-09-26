@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>External API — Generic</title>
+<link rel="stylesheet" href="app.css">
+<div class="wrap">
+<nav style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+<a href="index.html">Control</a> <a href="observatory.html">Observatory</a> <a href="external_api.html" style="font-weight:700">External API</a>
+</nav>
+<div class="card">
+<h2 style="margin:0 0 8px">External API — Generic In/Out §51</h2>
+<p class="muted">V2+ bolt-on — `POST /master/external-api` generic, not hard-coded provider. `base_url` any, `trail_path` default <code>/human/{id}/trail</code> per <code>API_SPEC §51 GET /human/{id}/trail</code>. Each call isolated.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+<label>Base URL: <input id="base" value="https://api.example.org" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;width:280px"></label>
+<label>Trail path: <input id="trail" value="/human/{id}/trail" style="padding:7px 8px;border:1px solid var(--line);border-radius:8px;width:200px"></label>
+</div>
+<div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="sealExt">Seal External API</button><button class="btn ghost">Test fetch</button></div>
+<div style="margin-top:10px" class="kv">Sealed: <code id="hash">sha256: —</code> · Generic — API in almost anything, push out to anything (deliverable.zip via <code>B.prev=A</code>)</div>
+</div>
+</div>
+<script>
+const b=document.getElementById('base'), t=document.getElementById('trail'), h=document.getElementById('hash');
+function upd(){ h.textContent='sha256:'+btoa(b.value+t.value).slice(0,8); }
+b.oninput=upd; t.oninput=upd; upd();
+document.getElementById('sealExt').onclick=()=>alert('Seal → POST /master/external-api 201 '+h.textContent);
+</script>
