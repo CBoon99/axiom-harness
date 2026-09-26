@@ -8,10 +8,10 @@
 - **AXIOM_ broad allowlist — CLOSED 2026-09-26 Phase 1 `7df9aae`:** `axiom_harness/paths.py ALLOWED_SCRIPT_PREFIXES=["scripts/factory_","AXIOM_WB_"]` only (G10 narrow). `tests/test_allowlist_anchored + test_patches` migrated to `AXIOM_WB_` first, then tighten — `AXIOM_test`/`AXIOM_EVO` now correctly `failed_policy`, `AXIOM_WB_test` passes. G8 `owner:axiom-harness` stayed narrow throughout.
 
 ## Narrow Gates Held (G8/G10)
-- **G8 owner:axiom-harness:** `axiom_harness/registry.py` asserts `owner == "axiom-harness"` — all events must carry qualifier — held from `f024fee` through `e6754e1`.
+- **G8 owner:axiom-harness:** `axiom_harness/registry.py` asserts `owner == "axiom-harness"` — all events must carry qualifier — held from `f024fee` through `a26399e`.
 - **G10 AXIOM_WB_ narrow:** `ALLOWED_SCRIPT_PREFIXES=["scripts/factory_","AXIOM_WB_"]` — held since `7df9aae`, verified `143→147→149` green.
 
-## Verification (final HEAD `e6754e1`)
+## Verification (final HEAD `a26399e`)
 - `PYTHONPATH="$PWD" /Library/Developer/CommandLineTools/usr/bin/python3 -m pytest -q` → **149 passed 0 warnings** (139 Phase 1 base + 4 hallmark `test_receipt_signature` + 4 gated `test_per_eca_gated` + 2 export 22-file `test_export_22_file_pack + test_sha256sum_c`)
 - `env PYTHONPATH="$PWD" PATH="/Library/Developer/CommandLineTools/usr/bin:$PATH" bash smoke.sh` → **5/5** (`health jail OK, seal validates, pressure allowlist OK, manifest canonical OK, orphans 0 + ai_computed_metrics:false + sealed_by/at/instrument/sop_version`)
 - `B.prev=A` chain — `tests/test_matrix_seals 18cell` + `smoke [5]` — `orphans[]==0` — `ai_computed_metrics:false` hallmarked `sealed_by:harness sealed_at:ISO instrument:axiom_wb|per_eca|evo_eu|future sop_version:1.0-PATCH-ILLUSION`
@@ -24,7 +24,7 @@
 - **Phase 1 `7df9aae`:** env hardening — AXIOM_WB narrow, hallmarks, .python-version 3.9.6, SETUP one-liner, 143 passed + browser 12-page
 - **Phase 2 `3719d88`:** PER/ECA gated — FrozenDict, PerConfig/EcaConfig, LOCK-STATUS.json, POST /per+/eca+/seal OFF, 147 passed
 - **Phase 3 `e6754e1`:** Export real — VisualConfig Layer 4 `393,216:1` one room, 22-file pack, 149 passed
-- **Phase 4 `HARNESS_AUDIT_2026-09-26.md` (this audit):** §35 A→Z read-only trace both directions, who+when hallmarked, preflight refresh to `e6754e1`
-- **Next:** `push live` on your confirm — origin/main — never squash. No Phase 5 (human 80×8D) tonight, no World-A, no commercial.
+- **Phase 4 `a26399e`:** Audit §35 A→Z + sync — `HARNESS_AUDIT_2026-09-26.md` read-only trace both directions, who+when hallmarked, `WORKING.md` + `README.md` + `MASTER.md` to `a26399e`, preflight refresh to `a26399e`, final QA `149 passed + 5/5 + cold-run green` — **pushed to origin/main**
+- **Next:** No Phase 5 (human 80×8D) tonight, no World-A, no commercial — lab is LIVE-ready, `push live` done `5033370..a26399e`.
 
-*Updated per House Order §35-36 2026-09-26 Phase 4 — 149 passed.*
+*Updated per House Order §35-36 2026-09-26 Phase 4 — 149 passed — final HEAD a26399e.*

@@ -8,7 +8,7 @@
 - **Harness root:** `/Users/carlboon/Documents/Axiom Harness-Master - Dont Touch/Staging`
 - **Parent product:** `Axiom Lab Harness` (siblings: `Documents/Axiom-Workbench/`, `Documents/Axiom Future/`, `Documents/Axiom Evidence Layer/`, `Documents/world-a/`)
 - **Harness root discovery:** `STAGING_ROOT = Path(__file__).resolve().parents[1]` + assert `axiom_harness/` + `missions/` structure exists (not name substring — fixed 522b4fd)
-- **Git:** `origin https://github.com/CBoon99/axiom-harness` — HEAD `e6754e135c43791a7f3f57e1b2addf95359dfe9f` `e6754e1 Tidy — docs: LAB_GUIDE + how to use/setup/data/test/output/naming` (149 passed, 0 warnings) — ahead 0 on `origin/main`, `Everything up-to-date` at this preflight — previous `f024fee Hardening — registry gate owner:axiom-harness`
+- **Git:** `origin https://github.com/CBoon99/axiom-harness` — HEAD `a26399e6a7c876a3ce60550952c38bb4406dc593` `a26399e Tidy — docs: LAB_GUIDE + how to use/setup/data/test/output/naming` (149 passed, 0 warnings) — ahead 0 on `origin/main`, `Everything up-to-date` at this preflight — previous `f024fee Hardening — registry gate owner:axiom-harness`
 - **Current HEAD log:** `5c88711` ← `f024fee` ← `edaf935 Noise fix` ← `c4cddcc V3 Human` ← `b99f059 Sync` ← `5f99870 Export` ← `58c8d11 V2+` ← `4a172ec V2` ← `041b12f V1.9` ← `9412cde Polish` ← `ff5cc63 V1.8.1` ← `d479fe9 V1.8`
 
 ## 2. Estate Counts (read-only)
