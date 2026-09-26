@@ -1,18 +1,25 @@
 {
   "date": "2026-09-26",
-  "harness_root": "/Users/carlboon/Documents/Axiom Harness-Master - Dont Touch/Staging",
-  "parent_product": "Axiom Lab Harness",
-  "tree_counts": {
-    "files": 26490,
-    "dirs": 2686
-  },
-  "hashes": {
-    "mission.py": "15541bb7ad94bb12",
-    "manifest.py": "bf6edb0f073d1c38"
-  },
-  "test_roots": [
-    "tests/"
+  "evidence_roots": [
+    "outputs/",
+    "proof/"
   ],
+  "execution_entry_points": [
+    "app/index.html",
+    "api/main.py",
+    "missions/master_demo_wtf001.yaml"
+  ],
+  "git": {
+    "head": "5c8871190b49ccec8833ae7a0f34247cbc4eab4b",
+    "head_short": "5c88711"
+  },
+  "harness_root": "/Users/carlboon/Documents/Axiom Harness-Master - Dont Touch/Staging",
+  "hashes": {
+    "manifest.py": "bf6edb0f073d1c38",
+    "mission.py": "15541bb7ad94bb12"
+  },
+  "parent_product": "Axiom Lab Harness",
+  "qa_proof_refreshed": "2026-09-26 \u00a733-36",
   "test_files": [
     "test_allowlist_anchored.py",
     "test_audio_v15.py",
@@ -42,21 +49,18 @@
     "test_sensors_v16.py",
     "test_video_v19.py"
   ],
+  "test_roots": [
+    "tests/"
+  ],
   "test_status": {
-    "passed": 139,
     "failed": 0,
+    "passed": 139,
     "warnings": 0
   },
-  "execution_entry_points": [
-    "app/index.html",
-    "api/main.py",
-    "missions/master_demo_wtf001.yaml"
-  ],
-  "evidence_roots": [
-    "outputs/",
-    "proof/"
-  ],
-  "git": {
-    "head": "f024fee768310b22c9fc886f8622ed81b6da0d6f"
+  "tree_counts": {
+    "dirs": 85,
+    "files": 320,
+    "tree_entries_after": 406,
+    "tree_entries_before": 402
   }
 }

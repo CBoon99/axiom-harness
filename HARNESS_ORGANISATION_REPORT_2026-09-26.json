@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-26",
+  "house_order": "§33-36",
+  "base_head": "5c8871190b49ccec8833ae7a0f34247cbc4eab4b",
+  "base_head_short": "5c88711",
+  "tree": {
+    "before": "CURRENT_TREE.txt",
+    "after": "PROPOSED_TREE.txt",
+    "before_entries": 402,
+    "after_entries": 406,
+    "net": 4
+  },
+  "duplicate_audit": {
+    "resolved": [
+      {
+        "pair": "docs/AI_ERROR_* <-> Favorable errors/AI_ERROR_*",
+        "files": 8,
+        "sha_identical": ["23fcceb9", "faaf30d1", "51ac3a68", "a504b914", "bf6bc757", "032afed8", "96b85fee", "733e7898"],
+        "action": "git mv 'Favorable errors' archive/Favorable-errors-2026-09-24 (10 files incl ABSOLUTE_FULL_REPORT + TABLE_OF_FIGURES)",
+        "canonical": "docs/AI_ERROR_*.csv/md"
+      }
+    ],
+    "intentional_not_archived": [
+      "math/HARDENED_LOCKS.md 71e3be70 x3 (axiom_future, axiom_evidence copies)",
+      "math/*/EXISTS.md x5",
+      "docs/briefs/AXIOM_HARNESS_Brief.md historical",
+      "basename control.html across app/wireframes rooms"
+    ],
+    "orphans": 0,
+    "dead_files_deleted": 0,
+    "archived": "archive/Favorable-errors-2026-09-24 (10 files) + archive/README.md"
+  },
+  "qa": {
+    "pytest": "139 passed in 0.40s, 0 warnings (protected_namespaces=())",
+    "smoke": "5/5 (health jail OK, seal validates, pressure allowlist OK, manifest canonical OK, orphans 0)",
+    "hashes": {
+      "mission.py": "15541bb7ad94bb12",
+      "manifest.py": "bf6edb0f073d1c38",
+      "paths.py": "8281e6ae9574f4da",
+      "main.py": "c110248424674b89",
+      "HARDENED_LOCKS": "71e3be70",
+      "PER_ECA": "5bb83c6e",
+      "WTF": "dc78ac17",
+      "hash_contract": "WTF-005A-HASH-v3 sort_keys True ensure_ascii False (\",\",\":\")"
+    },
+    "gates": ["G8 owner:axiom-harness", "G10 broad AXIOM_ risk logged in WORKING.md"]
+  },
+  "naming_and_output": {
+    "naming_standard": "docs/NAMING_STANDARD_2026-09-26.md EXP-<DOMAIN>-<NNN> frozen",
+    "documentation_standard": "docs/DOCUMENTATION_STANDARD_2026-09-26.md 5-file seal -> 22-file pack",
+    "lab_guide": "docs/LAB_GUIDE.md 8 sections + BEST_PRACTICE incorporated"
+  }
+}
